@@ -1,3 +1,5 @@
+"use client";
+
 import { NewReviewFormContainer } from "../NewReviewForm/container";
 import { RestaurantReview } from "../RestaurantReview/component";
 import styles from "./styles.module.css";

@@ -2,7 +2,7 @@
 
 import { useReducer } from "react";
 
-import useSWR from 'swr';
+
 import styles from "./styles.module.css";
 import { Button } from "../Button/component";
 
@@ -29,7 +29,6 @@ const reducer = (state, { type, payload } = {}) => {
 
 export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
   const [form, dispatch] = useReducer(reducer, review ? review : DEFAULT_VALUE);
-  const { data, error, revalidate } = useSWR('/api/data');
 
   return (
     <div>
@@ -69,7 +68,6 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
             userId: "dfb982e9-b432-4b7d-aec6-7f6ff2e6af54",
           });
           dispatch({ type: "clearForm" });
-          revalidate;
         }}
       >
         Save

@@ -1,6 +1,6 @@
 
 import styles from "./styles.module.css";
-import { fetchRestaurant } from "@/services/api";
+import { fetchRestaurant} from "@/services/api";
 import MenuContainer from "@/components/Menu/container";
 import ReviewsContainer from "@/components/Reviews/container";
 

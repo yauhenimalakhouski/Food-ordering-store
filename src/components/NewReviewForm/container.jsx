@@ -1,16 +1,12 @@
-"use client";
-
-
-import { useMakeRequest } from "@/hooks/use-make-request";
+import { useCreateReviewMutation } from "@/store/services/api";
 import { NewReviewForm } from "./component";
-import { createReview as createReviewThunk } from "@/store/features/review/thunks/create-review";
 
 export const NewReviewFormContainer = ({ restaurantId }) => {
-  const [status, createReview] = useMakeRequest(createReviewThunk);
+  const [createReview, { isLoading }] = useCreateReviewMutation();
 
-  // if (isLoading) {
-  //   return <span>Saving...</span>;
-  // }
+  if (isLoading) {
+    return <span>Saving...</span>;
+  }
 
   return (
     <NewReviewForm
