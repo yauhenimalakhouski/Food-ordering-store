@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { useCallback } from "react";
-import { EditReviewFormContainer } from "../EditReviewForm/container";
-import { Review } from "../Review/component";
-import { Button } from "../Button/component";
+
 
 import styles from "./styles.module.css";
 import classNames from "classnames";
+import { EditReviewFormContainer } from "../EditReviewForm/container";
+import { Button } from "../Button/component";
+import { Review } from "../Review/component";
 
 export const RestaurantReview = ({ review, className }) => {
   const [isEditable, setIsEditable] = useState(false);
@@ -18,7 +19,7 @@ export const RestaurantReview = ({ review, className }) => {
 
   return (
     <div className={classNames(styles.root, className)}>
-      {/* {isEditable ? (
+      {isEditable ? (
         <EditReviewFormContainer
           review={review}
           onSaveForm={cancelEdit}
@@ -26,7 +27,7 @@ export const RestaurantReview = ({ review, className }) => {
         />
       ) : (
         <Review review={review} />
-      )} */}
+      )}
        <Review review={review} />
       {!isEditable && <Button onClick={() => setIsEditable(true)}>Edit</Button>}
     </div>

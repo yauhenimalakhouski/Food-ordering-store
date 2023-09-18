@@ -1,6 +1,7 @@
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
 import { createReview } from "./thunks/create-review";
 
+
 const reviewEntityAdapter = createEntityAdapter();
 
 export const reviewSlice = createSlice({

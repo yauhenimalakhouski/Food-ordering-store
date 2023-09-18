@@ -1,6 +1,4 @@
-// import { NewReviewFormContainer } from "../NewReviewForm/container";
-
-
+import { NewReviewFormContainer } from "../NewReviewForm/container";
 import { RestaurantReview } from "../RestaurantReview/component";
 import styles from "./styles.module.css";
 
@@ -17,7 +15,7 @@ export const Reviews = ({ reviews, restaurantId }) => {
           />
         ))}
       </div>
-      {/* <NewReviewFormContainer restaurantId={restaurantId} /> */}
+      <NewReviewFormContainer restaurantId={restaurantId} />
     </div>
   );
 };

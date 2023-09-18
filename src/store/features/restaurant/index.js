@@ -14,5 +14,13 @@ export const restaurantSlice = createSlice({
         },
       });
     },
+    updateReview: (state, {payload: {restaurantId, reviewId}}) => {
+      restaurantEntityAdapter.updateOne(state, {
+        id: reviewId,
+        changes: {
+          reviews: [...state.entities[restaurantId], reviewId],
+        },
+      });
+    },
   },
 });

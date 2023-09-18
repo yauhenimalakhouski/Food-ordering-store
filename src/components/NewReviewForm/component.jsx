@@ -1,7 +1,7 @@
 import classNames from "classnames";
-import { ReviewForm } from "../ReviewForm/component";
 
 import styles from "./styles.module.css";
+import { ReviewForm } from "../ReviewForm/component";
 
 export const NewReviewForm = ({ className, ...props }) => {
   return (

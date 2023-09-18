@@ -43,7 +43,9 @@ export async function fetchAllDishs() {
 }
 
 export async function fetchRestaurantReviews(restaurantId) {
-  const response = await fetch(`http://localhost:3001/api/reviews?restaurantId=${restaurantId}`);
+  const response = await fetch(`http://localhost:3001/api/reviews?restaurantId=${restaurantId}`, {
+    next: { tags: ["config"] },
+  });
 
   if (!response.ok) {
     throw new Error("Error");
