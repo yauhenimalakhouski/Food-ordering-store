@@ -1,5 +1,4 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
-import { loadRestaurantsIfNotExist } from "./thunks/load-restaurants";
 
 const restaurantEntityAdapter = createEntityAdapter();
 
@@ -16,11 +15,4 @@ export const restaurantSlice = createSlice({
       });
     },
   },
-  extraReducers: (builder) =>
-    builder.addCase(
-      loadRestaurantsIfNotExist.fulfilled,
-      (state, { payload } = {}) => {
-        restaurantEntityAdapter.setAll(state, payload);
-      }
-    ),
 });
