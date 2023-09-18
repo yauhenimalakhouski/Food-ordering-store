@@ -1,15 +1,23 @@
-import { User } from "./component";
-// import { fetchUsers } from "@/services/api";
+import { useGetUsersQuery } from "@/store/services/api";
+import { User } from "./component";;
 
-export default async function UserContainer({ userId }){
-  // const users = await fetchUsers();
+export const UserContainer = ({ userId }) => {
+  const { data: user, isFetching } = useGetUsersQuery(undefined, {
+    selectFromResult: (result) => {
+      return {
+        ...result,
+        data: result.data?.find(({ id }) => id === userId),
+      };
+    },
+  });
 
+  if (isFetching) {
+    return <div>Loading...</div>;
+  }
 
-  // const user = users.find((user) => user.id === userId);
+  if (!user) {
+    return null;
+  }
 
-  // if (!users.length) {
-  //   return null;
-  // }
-
-  return <User user={userId} />;
+  return <User user={user} />;
 };
