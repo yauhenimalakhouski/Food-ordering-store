@@ -9,18 +9,27 @@ import { LoginForm } from "../LoginForm/component.jsx";
 import { selectCurrentUser } from "@/store/features/authorization/selectors.js";
 import { authorizationSlice } from "@/store/features/authorization/index.js";
 
+
 export const LoginButton = () => {
   const [isModalOpened, setIsModalOpened] = useState();
   const dispatch = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
-
+  
   return (
     <>
       <div>
         {currentUser && <span>{currentUser}</span>}
         <Button
           onClick={() => {
-            currentUser ? dispatch(authorizationSlice.actions.logout()) : setIsModalOpened(true);
+            if(currentUser) {
+              localStorage.removeItem("currentUser");
+              localStorage.removeItem("currentUserPassword");
+              localStorage.removeItem("userStartSessionTime");
+              dispatch(authorizationSlice.actions.logout());
+              
+            } else {
+              setIsModalOpened(true);
+            } 
           }}
         >
           {currentUser ? "Logout" : "Login"}

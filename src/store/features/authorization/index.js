@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const DEFAULT_STATE = {
-  currentUser: undefined,
-  startSessionTime: undefined,
+  currentUser: localStorage.getItem("currentUser"),
+  userPassword: localStorage.getItem("currentUserPassword"),
+  startSessionTime: localStorage.getItem("userStartSessionTime"),
 };
 
 export const authorizationSlice = createSlice({
@@ -13,10 +14,14 @@ export const authorizationSlice = createSlice({
       state.currentUser = payload.login;
       state.userPassword = payload.password;
       state.startSessionTime = Date.now();
+      localStorage.setItem("userStartSessionTime", state.startSessionTime);
     },
     logout: (state) => {
       state.currentUser = null;
+      state.userPassword = null;
       state.startSessionTime = null;
+      
     },
   },
 });
+
