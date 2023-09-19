@@ -1,14 +1,13 @@
 import classNames from "classnames";
-// import { LoginButton } from "../LoginButton/component";
 
 import styles from "./styles.module.css";
 import Link from "next/link";
 import { LoginButton } from "../LoginButton/component";
+import { ThemeButton } from "../ThemeButton/component";
 
 export const Header = ({ className }) => {
   return (
     <header className={classNames(styles.root, className)}>
-      {/* <LoginButton /> */}
       <Link href="/">
         Home
       </Link>
@@ -16,6 +15,7 @@ export const Header = ({ className }) => {
       <Link href={"/cart"}>Cart</Link>
       <Link href={"/dishes"}>Dishes</Link>
       <LoginButton />
+      <ThemeButton />
     </header>
   );
 };
