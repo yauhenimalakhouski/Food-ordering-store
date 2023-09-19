@@ -1,5 +1,6 @@
-export const loggerMiddleware = () => (next) => (action) => {
-  console.log(action);
+export const loggerMiddleware = (state) => (next) => (action) => {
+  console.log(state.getState());
+  
 
   next(action);
 };

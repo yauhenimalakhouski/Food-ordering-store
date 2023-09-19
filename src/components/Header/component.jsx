@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import styles from "./styles.module.css";
 import Link from "next/link";
+import { LoginButton } from "../LoginButton/component";
 
 export const Header = ({ className }) => {
   return (
@@ -14,6 +15,7 @@ export const Header = ({ className }) => {
       <Link href={"/restaurants"}>Restaurants</Link>
       <Link href={"/cart"}>Cart</Link>
       <Link href={"/dishes"}>Dishes</Link>
+      <LoginButton />
     </header>
   );
 };
