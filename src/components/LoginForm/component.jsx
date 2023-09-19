@@ -51,7 +51,7 @@ export const LoginForm = ({ onLogin }) => {
       <Button
         disabled={!form.login || !form.password}
         onClick={() => {
-          dispatchUser(authorizationSlice.actions.login(form.login));
+          dispatchUser(authorizationSlice.actions.login({login:form.login, password:form.password}));
           onLogin();
         }}
       >

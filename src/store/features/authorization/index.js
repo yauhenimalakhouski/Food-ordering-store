@@ -10,7 +10,8 @@ export const authorizationSlice = createSlice({
   initialState: DEFAULT_STATE,
   reducers: {
     login: (state, { payload }) => {
-      state.currentUser = payload;
+      state.currentUser = payload.login;
+      state.userPassword = payload.password;
       state.startSessionTime = Date.now();
     },
     logout: (state) => {
