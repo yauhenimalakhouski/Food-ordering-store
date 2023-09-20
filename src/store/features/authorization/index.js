@@ -1,9 +1,13 @@
+
+import { storeItems } from "@/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
 
+
+
 const DEFAULT_STATE = {
-  currentUser: localStorage.getItem("currentUser"),
-  userPassword: localStorage.getItem("currentUserPassword"),
-  startSessionTime: localStorage.getItem("userStartSessionTime"),
+  currentUserName: localStorage.getItem("currentUser") || null,
+  userPassword: localStorage.getItem("currentUserPassword") || null,
+  startSessionTime: localStorage.getItem("userStartSessionTime") || null,
 };
 
 export const authorizationSlice = createSlice({
@@ -11,13 +15,14 @@ export const authorizationSlice = createSlice({
   initialState: DEFAULT_STATE,
   reducers: {
     login: (state, { payload }) => {
-      state.currentUser = payload.login;
+      state.currentUserName = payload.login;
       state.userPassword = payload.password;
       state.startSessionTime = Date.now();
-      localStorage.setItem("userStartSessionTime", state.startSessionTime);
+      // localStorage.setItem("userStartSessionTime", state.startSessionTime);
+      storeItems(state);
     },
     logout: (state) => {
-      state.currentUser = null;
+      state.currentUserName = null;
       state.userPassword = null;
       state.startSessionTime = null;
       

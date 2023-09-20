@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import { useDispatch } from "react-redux";
 
 import { Button } from "../Button/component";
@@ -26,11 +26,6 @@ export const LoginForm = ({ onLogin }) => {
   const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
   
   const dispatchUser = useDispatch();
-
-  useEffect(()=> {
-    localStorage.setItem("currentUser", form.login);
-    localStorage.setItem("currentUserPassword", form.password);
-  }, [form]);
 
   return (
     <div>

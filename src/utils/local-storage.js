@@ -1,7 +1,11 @@
-export default function storeItems(data) {
+export const storeItems = (data) => {
     localStorage.setItem("currentUser", JSON.stringify(data));
 }
 
-export default function restoreItems() {
+export const restoreItems =  () => {
     return JSON.parse(localStorage.getItem("currentUser")) || {};
+}
+
+export const deleteItems = () => {
+    localStorage.removeItem("currentUser");
 }
