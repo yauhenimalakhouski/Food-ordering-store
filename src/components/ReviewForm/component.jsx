@@ -2,9 +2,10 @@
 
 import { useReducer } from "react";
 
-
 import styles from "./styles.module.css";
 import { Button } from "../Button/component";
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "@/store/features/authorization/selectors";
 
 const DEFAULT_VALUE = {
   name: "",
@@ -29,7 +30,7 @@ const reducer = (state, { type, payload } = {}) => {
 
 export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
   const [form, dispatch] = useReducer(reducer, review ? review : DEFAULT_VALUE);
-
+  const userName = useSelector(selectCurrentUser);
   return (
     <div>
       {!review?.id && (

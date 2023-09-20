@@ -8,7 +8,7 @@ const AUTHORIZED_ACTIONS = [
   cartSlice.actions.incrementDish.type,
   cartSlice.actions.decrementDish.type,
 ];
-const SESSION_LIFE_TIME = 5 * 60 * 1000;
+const SESSION_LIFE_TIME = 1 * 60 * 1000;
 
 export const checkAuthorization =
   (store) =>

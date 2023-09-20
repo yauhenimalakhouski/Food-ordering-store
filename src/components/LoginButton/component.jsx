@@ -8,7 +8,7 @@ import { Button } from "../Button/component.jsx";
 import { LoginForm } from "../LoginForm/component.jsx";
 import { selectCurrentUser } from "@/store/features/authorization/selectors.js";
 import { authorizationSlice } from "@/store/features/authorization/index.js";
-import { deleteItems } from "@/utils/local-storage.js";
+// import { deleteItems } from "@/utils/local-storage.js";
 
 
 export const LoginButton = () => {
@@ -23,7 +23,7 @@ export const LoginButton = () => {
         <Button
           onClick={() => {
             if(currentUser) {
-              deleteItems();
+              // deleteItems();
               dispatch(authorizationSlice.actions.logout());
               
             } else {
