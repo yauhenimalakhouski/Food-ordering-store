@@ -22,10 +22,10 @@ export const authorizationSlice = createSlice({
       storeItems(state);
     },
     logout: (state) => {
+      state.currentUserId = null;
       state.currentUserName = null;
       state.userPassword = null;
       state.startSessionTime = null;
-      deleteItems();
     },
   },
 });

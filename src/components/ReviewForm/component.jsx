@@ -32,8 +32,12 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
   const userName = useSelector(selectCurrentUser);
   
   const [form, dispatch] = useReducer(reducer, review ? review : (DEFAULT_VALUE));
+  if(!review){
+    if(userName){
+      form.name = userName;
+    } 
+  }
   
-  form.name = userName;
   const userId = useSelector(selectCurrentUserId);
 
   return (
@@ -42,6 +46,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
         <div className={styles.field}>
           <label>Name:</label>
           <input
+            disabled = {!userName}
             value={form.name}
             onChange={(event) =>
               dispatch({ type: "setName", payload: event.target.value })
@@ -52,6 +57,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
       <div className={styles.field}>
         <label>Text</label>
         <input
+          disabled = {!userName}
           value={form.text}
           onChange={(event) =>
             dispatch({ type: "setText", payload: event.target.value })
@@ -61,6 +67,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
       <div className={styles.field}>
         <label>Rating</label>
         <input
+          disabled = {!userName}
           value={form.rating}
           onChange={(event) =>
             dispatch({ type: "setRating", payload: event.target.value })
@@ -68,6 +75,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
         />
       </div>
       <Button
+        disabled = {!userName}
         onClick={() => {
           onSaveForm({
             ...form,

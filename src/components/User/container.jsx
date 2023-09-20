@@ -1,10 +1,11 @@
 import { useGetUsersQuery } from "@/store/services/api";
-import { User } from "./component";import { useSelector } from "react-redux";
-import { selectCurrentUser } from "@/store/features/authorization/selectors";
-;
+import { User } from "./component";
+import { restoreItems } from "@/utils/local-storage";
+
+
 
 export const UserContainer = ({ userId }) => {
-  const currentUser = useSelector(selectCurrentUser);
+  const localData = restoreItems();
   const { data: user, isFetching } = useGetUsersQuery(undefined, {
     selectFromResult: (result) => {
       return {
@@ -14,7 +15,7 @@ export const UserContainer = ({ userId }) => {
     },
   });
 
-  const reviewUser = user?.name || currentUser;
+  const reviewUser = user?.name || localData.currentUserName;
 
   if (isFetching) {
     return <div>Loading...</div>;
