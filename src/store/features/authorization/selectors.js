@@ -1,5 +1,8 @@
 export const selectAuthorizationModule = (state) => state.authorization;
 
+export const selectCurrentUserId = (state) =>
+  selectAuthorizationModule(state).currentUserId;
+
 export const selectCurrentUser = (state) =>
   selectAuthorizationModule(state).currentUserName;
 

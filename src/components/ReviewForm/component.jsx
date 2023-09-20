@@ -5,10 +5,9 @@ import { useReducer } from "react";
 import styles from "./styles.module.css";
 import { Button } from "../Button/component";
 import { useSelector } from "react-redux";
-import { selectCurrentUser } from "@/store/features/authorization/selectors";
+import { selectCurrentUser, selectCurrentUserId } from "@/store/features/authorization/selectors";
 
 const DEFAULT_VALUE = {
-  name: "",
   text: "",
   rating: 5,
 };
@@ -29,13 +28,19 @@ const reducer = (state, { type, payload } = {}) => {
 };
 
 export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
-  const [form, dispatch] = useReducer(reducer, review ? review : DEFAULT_VALUE);
+
   const userName = useSelector(selectCurrentUser);
+  
+  const [form, dispatch] = useReducer(reducer, review ? review : (DEFAULT_VALUE));
+  
+  form.name = userName;
+  const userId = useSelector(selectCurrentUserId);
+
   return (
     <div>
       {!review?.id && (
         <div className={styles.field}>
-          <label>Name</label>
+          <label>Name:</label>
           <input
             value={form.name}
             onChange={(event) =>
@@ -66,7 +71,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
         onClick={() => {
           onSaveForm({
             ...form,
-            userId: "dfb982e9-b432-4b7d-aec6-7f6ff2e6af54",
+            userId: userId,
           });
           dispatch({ type: "clearForm" });
         }}
