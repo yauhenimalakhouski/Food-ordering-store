@@ -1,5 +1,5 @@
 import { Tabs } from "@/components/Tabs/component";
-import { fetchRestaurantDishs, fetchRestaurants } from "@/services/api";
+import { fetchRestaurants } from "@/services/api";
 
 
 
