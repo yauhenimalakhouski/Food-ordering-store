@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header/component";
 import "./globals.css";
 import { StoreProvider } from "@/store/provider";
+import { Footer } from "@/components/Footer/component";
 
 export default function RootLayout({ children }) {
   return (
@@ -9,8 +10,8 @@ export default function RootLayout({ children }) {
         <div id="modal-container"></div>
         <StoreProvider>
           <Header />
-          <div>{children}</div>
-          <header>footer</header>
+          <main>{children}</main>
+          <Footer>footer</Footer>
         </StoreProvider>
       </body>
     </html>

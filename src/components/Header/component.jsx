@@ -13,7 +13,7 @@ export const Header = ({ className }) => {
       </Link>
       <Link href={"/restaurants"}>Restaurants</Link>
       <Link href={"/cart"}>Cart</Link>
-      <Link href={"/dishes"}>Dishes</Link>
+      <Link href={"/dishes"}>All Dishes</Link>
       <LoginButton />
       <ThemeButton />
     </header>

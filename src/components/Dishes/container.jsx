@@ -26,7 +26,6 @@ export const DishesContainer = ({dishes}) => {
                 onChange={(event) => setSearch(event.target.value)}
             />
            <Dishes dishes = {filteredDishes}></Dishes> 
-        </div>
-        
+        </div>   
     )
 }
