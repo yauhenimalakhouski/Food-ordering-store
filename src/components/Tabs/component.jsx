@@ -4,7 +4,7 @@ export const Tabs = ({ restaurants }) => {
   return (
     <div>
       {restaurants.map(({ id, name }) => (
-        <Tab key={id} title={name} path={`/restaurants/${id}`} />
+        <Tab key={id} title={name} path={`/restaurants/${id}/menu`} />
       ))}
     </div>
   );
