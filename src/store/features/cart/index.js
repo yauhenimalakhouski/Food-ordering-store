@@ -10,5 +10,8 @@ export const cartSlice = createSlice({
     decrementDish: (state, { payload }) => {
       state[payload] = (state[payload] || 0) > 0 ? state[payload] - 1 : 0;
     },
+    clearCart: (state) => {
+      return {};
+    },
   },
 });
