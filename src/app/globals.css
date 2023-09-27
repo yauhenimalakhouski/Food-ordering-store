@@ -1,3 +1,11 @@
+:root {
+  --header-text-color: white;
+}
+
+:root[theme='dark'] {
+
+}
+
 * {
   box-sizing: border-box;
 }

@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: var(--header-text-color);
     font-size: 20px;
     text-transform: capitalize;
 }

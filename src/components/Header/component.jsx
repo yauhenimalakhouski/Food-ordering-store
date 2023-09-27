@@ -1,4 +1,6 @@
 import classNames from "classnames";
+import Image from "next/image";
+
 
 import styles from "./styles.module.css";
 import Link from "next/link";
@@ -8,15 +10,46 @@ import { ThemeButton } from "../ThemeButton/component";
 export const Header = ({ className }) => {
   return (
     <header className={classNames(styles.root, className)}>
-
       <Link href="/">
-        <img src="/logo.svg" loading="lazy" className = {styles.logo}/>
+        <Image 
+          src="/logo.svg"
+          width={75}
+          height={75}
+          className = {styles.logo}
+          alt="Logo"
+        />
       </Link>
-      <Link href={"/restaurants"}>Restaurants</Link>
-      <Link href={"/cart"}>Cart</Link>
-      <Link href={"/dishes"}>All Dishes</Link>
-      <LoginButton />
-      <ThemeButton />
+      <nav className={classNames(styles.navigation)}>
+        <li>
+          <Link 
+            href={"/restaurants"}
+            className={classNames(styles.link)}
+          >
+            Restaurants
+          </Link>
+        </li>
+        <li>
+         <Link 
+          href={"/dishes"}
+          className={classNames(styles.link)}
+          >
+            Dishes
+          </Link>
+        </li> 
+        <li>
+          <Link 
+            href={"/cart"}
+            className={classNames(styles.link)}
+          >
+            Cart
+          </Link>
+        </li>
+      </nav>
+      <div className={classNames(styles.user_control_buttons)}>
+        <LoginButton />
+        <ThemeButton />
+      </div>
+      
     </header>
   );
 };

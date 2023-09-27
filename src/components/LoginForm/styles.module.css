@@ -1,9 +1,9 @@
 .root {
     position: absolute;
     top: 30%;
-    left: 40%;
+    left: 32.5%;
     z-index: 100;
-    width: 25%;
+    width: 35%;
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
     background: #bc3220;
 }
 
-.input_row{
+.input_row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,11 +26,13 @@
 
 .input_title {
     width: 30%;
-    font-size: 20px;
+    font-size: 24px;
+    color: var(--header-text-color);
 }
 
 .input {
-    height: 30px;
+    font-size: 24px;
+    height: 50px;
     width: 70%;
     border: 0;
     text-shadow: 1px 1px 1px #232323;
