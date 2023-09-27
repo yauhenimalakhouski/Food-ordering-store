@@ -13,13 +13,18 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
       </Link>
       
       <div className={styles.actions}>
-        <Button disabled={amount === 0} onClick={decrement}>
-          -
-        </Button>
+        <Button 
+          disabled={amount === 0} 
+          onClick={decrement}
+          type="btn_minus"
+          />
         <span> {amount} </span>
-        <Button disabled={amount === 5} onClick={increment}>
-          +
-        </Button>
+        <Button 
+          disabled={amount === 5} 
+          onClick={increment}
+          type="btn_plus"
+        />
+
       </div>
       <div className={styles.total}>Total: ${amount * dishPrice}</div>
     </div>

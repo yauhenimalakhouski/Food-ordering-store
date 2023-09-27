@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
         <div id="modal-container"></div>
         <StoreProvider>
           <Header />
-          <main>{children}</main>
+          <main className="main">{children}</main>
           <Footer>footer</Footer>
         </StoreProvider>
       </body>

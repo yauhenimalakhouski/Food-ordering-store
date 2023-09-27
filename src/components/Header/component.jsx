@@ -8,8 +8,9 @@ import { ThemeButton } from "../ThemeButton/component";
 export const Header = ({ className }) => {
   return (
     <header className={classNames(styles.root, className)}>
+
       <Link href="/">
-        Home
+        <img src="/logo.svg" loading="lazy" className = {styles.logo}/>
       </Link>
       <Link href={"/restaurants"}>Restaurants</Link>
       <Link href={"/cart"}>Cart</Link>

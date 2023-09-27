@@ -1,3 +1,6 @@
+import styles from './styles.module.css';
+import classNames from 'classnames';
+
 import { useReducer } from "react";
 import { useDispatch } from "react-redux";
 
@@ -28,23 +31,25 @@ export const LoginForm = ({ onLogin }) => {
   const dispatchUser = useDispatch();
 
   return (
-    <div>
-      <div>
-        <label>Login</label>
+    <div className={classNames(styles.root)}>
+      <div className={classNames(styles.input_row)}>
+        <label className={classNames(styles.input_title)}>Name</label>
         <input
           value={form.login}
           onChange={(event) =>
             dispatch({ type: "setLogin", payload: event.target.value })
           }
+          className={classNames(styles.input)}
         />
       </div>
-      <div>
-        <label>Password</label>
+      <div className={classNames(styles.input_row)}>
+        <label className={classNames(styles.input_title)}>Password</label>
         <input
           value={form.password}
           onChange={(event) =>
             dispatch({ type: "setPassword", payload: event.target.value })
           }
+          className={classNames(styles.input)}
         />
       </div>
 
@@ -55,7 +60,10 @@ export const LoginForm = ({ onLogin }) => {
         onClick={() => {
           dispatchUser(authorizationSlice.actions.login({login:form.login, password:form.password}));
           onLogin();
+          document.body.style.overflow = "auto";
+          document.querySelector('.main').style.opacity = "1";
         }}
+        type = "auth_submit"
       >
         Login
       </Button>

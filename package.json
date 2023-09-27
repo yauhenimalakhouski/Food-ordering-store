@@ -23,6 +23,7 @@
     "swr": "^2.2.2"
   },
   "devDependencies": {
+    "node-sass": "^9.0.0",
     "prettier": "^3.0.3"
   }
 }

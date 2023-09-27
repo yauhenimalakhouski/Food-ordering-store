@@ -1,5 +1,8 @@
 "use client";
 
+import styles from './styles.module.css';
+import classNames from "classnames";
+
 import { createPortal } from "react-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +21,7 @@ export const LoginButton = () => {
   
   return (
     <>
-      <div>
+      <div className={classNames(styles.root)}>
         {currentUser && <span>{currentUser}</span>}
         <Button
           onClick={() => {
@@ -26,9 +29,12 @@ export const LoginButton = () => {
               dispatch(authorizationSlice.actions.logout());
               
             } else {
+              document.body.style.overflow = "hidden";
+              document.querySelector('.main').style.opacity = "0.2";
               setIsModalOpened(true);
             } 
           }}
+          type="authoriazation"
         >
           {currentUser ? "Logout" : "Login"}
         </Button>

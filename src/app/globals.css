@@ -4,5 +4,15 @@
 
 html, body {
   margin: 0;
-  height: 100%;
+  font-size: 16px;
+  height: 100vh;
+  background: #F2F5FC;
+  z-index: 10;
+}
+
+.main {
+  margin: 0 12.5%;
+	background: #d1d9e7;
+	min-height: calc(100vh - 150px);
+	padding-bottom: 30px;
 }
