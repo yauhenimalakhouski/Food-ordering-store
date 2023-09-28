@@ -3,7 +3,6 @@
 import { selectAllDishAmounts, selectCartDishIds } from "@/store/features/cart/selectors";
 import { useSelector } from "react-redux";
 import { Cart } from "./component";
-import { OrderForm } from "../OrderForm/component";
 
 
 export const CartContainer = ({dishes}) => {
@@ -15,12 +14,7 @@ export const CartContainer = ({dishes}) => {
     }, 0);
     return (
     <div>
-        <Cart dishes={dishesInCart}/>
-        <div>
-            <span>Total: </span>
-            <span>{totalPrice} $</span>
-        </div>
-        <OrderForm/>
+        <Cart dishes={dishesInCart} totalPrice={totalPrice}/>
     </div>
     
     

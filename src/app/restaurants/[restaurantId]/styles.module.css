@@ -1,2 +1,16 @@
 .root {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #008B8B;
+    margin: 20px;
 }

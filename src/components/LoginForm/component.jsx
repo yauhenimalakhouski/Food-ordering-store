@@ -65,7 +65,7 @@ export const LoginForm = ({ onLogin }) => {
         }}
         type = "auth_submit"
       >
-        Login
+        Log In
       </Button>
     </div>
   );

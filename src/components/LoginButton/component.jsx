@@ -27,7 +27,6 @@ export const LoginButton = () => {
           onClick={() => {
             if(currentUser) {
               dispatch(authorizationSlice.actions.logout());
-              
             } else {
               document.body.style.overflow = "hidden";
               document.querySelector('.main').style.opacity = "0.2";
@@ -36,7 +35,7 @@ export const LoginButton = () => {
           }}
           type="authoriazation"
         >
-          {currentUser ? "Logout" : "Login"}
+          {currentUser ? "Log Out" : "Log In"}
         </Button>
       </div>
 

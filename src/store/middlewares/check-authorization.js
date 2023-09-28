@@ -23,7 +23,7 @@ export const checkAuthorization =
     if (startSessionTime && Date.now() - startSessionTime < SESSION_LIFE_TIME) {
       return next(action);
     }
-
+    alert('Время сеанса закончилось, перезайдите');
     store.dispatch(authorizationSlice.actions.logout());
   };
 
