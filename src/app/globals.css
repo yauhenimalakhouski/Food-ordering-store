@@ -22,5 +22,5 @@ html, body {
   margin: 0 12.5%;
 	background: #d1d9e7;
 	min-height: calc(100vh - 150px);
-	padding-bottom: 30px;
+	/* padding-bottom: 30px; */
 }
