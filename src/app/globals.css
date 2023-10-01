@@ -19,7 +19,7 @@ html, body {
 }
 
 .main {
-  margin: 0 12.5%;
-	background: #d1d9e7;
+  /* margin: 0 12.5%; */
+	background: #fff;
 	min-height: calc(100vh - 150px);
 }

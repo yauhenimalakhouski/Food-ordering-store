@@ -1,15 +1,28 @@
 import { fetchRestaurant } from "@/services/api";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import Image from "next/image";
+import { restaurantsImagesUrl } from "@/consts/images_url";
+import { RestaurantNavLink } from "@/components/RestaurnatNavLink/component";
 
 export default async function RestaurantsLayout({ params: { restaurantId }, children }) {
   const restaurant = await fetchRestaurant(restaurantId);
-
+  const restaurantBannerUrl = restaurantsImagesUrl.find(imageUrl => restaurantId === imageUrl.id);
   return (
     <div>
-      <Link href={`/restaurants`}>Return to all restaurants</Link> 
-      <Link href={`/restaurants/${restaurantId}/menu`}>Menu</Link> 
-      <Link href={`/restaurants/${restaurantId}/reviews`}>Reviews</Link> 
+      <nav className={styles.navigation}>
+        <RestaurantNavLink path={`/restaurants`}>Return to all restaurants</RestaurantNavLink>
+        <RestaurantNavLink path={`/restaurants/${restaurantId}/menu`}>Menu</RestaurantNavLink>
+        <RestaurantNavLink path={`/restaurants/${restaurantId}/reviews`}>Reviews</RestaurantNavLink>
+      </nav>
+      <Image 
+        src={restaurantBannerUrl.url}
+        width={1564}
+        height={670}
+        layout="responsive"
+        aspectRatio="16:9"
+        alt="Banner"
+      />
       <div className={styles.root}>
         <h2 className={styles.title}>{restaurant?.name}</h2>
         <>{children}</>

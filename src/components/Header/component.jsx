@@ -1,11 +1,13 @@
 import classNames from "classnames";
 import Image from "next/image";
 
-
 import styles from "./styles.module.css";
 import Link from "next/link";
 import { LoginButton } from "../LoginButton/component";
 import { ThemeButton } from "../ThemeButton/component";
+
+const imageWidth = "75";
+const imageHeigth = "75";
 
 export const Header = ({ className }) => {
   return (
@@ -13,8 +15,8 @@ export const Header = ({ className }) => {
       <Link href="/">
         <Image 
           src="/logo.svg"
-          width={75}
-          height={75}
+          width={imageWidth}
+          height={imageHeigth}
           className = {styles.logo}
           alt="Logo"
         />

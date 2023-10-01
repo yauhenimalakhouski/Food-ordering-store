@@ -14,3 +14,10 @@
     color: #008B8B;
     margin: 20px;
 }
+
+.navigation {
+    width: 100%;
+    display: flex;
+    background: rgb(20, 18, 18);
+}
+ 
