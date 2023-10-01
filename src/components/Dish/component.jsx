@@ -17,7 +17,7 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
               {name}
           </Link>
         </div>
-        <div className={styles.dish_ingredients}>{ingredients.join(', ')}</div>
+        <div className={styles.dish_ingredients}>Ingridients: {ingredients.join(', ')}</div>
         <div className={styles.dish_price}>{dishPrice.toFixed(2)} $</div>
       </div>
       <div className={styles.dish_count_container}>
