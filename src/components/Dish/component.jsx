@@ -22,8 +22,8 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
                 src={dishImageUrl.url}
                 width={400}
                 height={225}
-                layout="responsive"
                 alt="Dish"
+                layout="responsive"
                 className={styles.image}
             />
             </Link>
