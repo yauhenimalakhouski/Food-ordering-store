@@ -16,6 +16,7 @@ export default async function RestaurantsLayout({ params: { restaurantId }, chil
       </nav>
       <Image 
         src={restaurantBannerUrl.url}
+        priority
         width={1564}
         height={670}
         layout="responsive"

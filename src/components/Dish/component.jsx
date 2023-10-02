@@ -14,19 +14,14 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
       <div className={styles.dish}>
         <div className={styles.dish}>
           <div className={styles.image_container}>
-            <Link 
-              href={`/dishes/${dish.id}`}
-              className={styles.link}
-            >
-              <Image
-                src={dishImageUrl.url}
-                width={400}
-                height={225}
-                alt="Dish"
-                layout="responsive"
-                className={styles.image}
+            <Image
+              src={dishImageUrl.url}
+              width={400}
+              height={225}
+              layout="responsive"
+              alt="Dish"
+              className={styles.image}
             />
-            </Link>
           </div>
           <div className={styles.dish_info_container}>
             <div className={styles.title}>
