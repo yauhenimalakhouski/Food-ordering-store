@@ -2,13 +2,24 @@ import classNames from "classnames";
 import styles from "./styles.module.css";
 import { Button } from "../Button/component";
 import Link from "next/link";
+import Image from "next/image";
+import { dishesUrl } from "@/consts/images_url";
 
-export const Dish = ({ dish, amount, increment, decrement, className }) => {
+export const Dish = ({ dish, amount, increment, decrement, dishId, className }) => {
   const { price: dishPrice, name, ingredients } = dish;
+  const dishImageUrl = dishesUrl.find((el) => dishId == el.id);
+  console.log(dishImageUrl)
 
   return (
     <div className={classNames(styles.root, className)}>
       <div className={styles.dish_info_container}>
+        <Image
+          src={dishImageUrl.url}
+          width={100}
+          height={100}
+          // layout="responsive"
+          alt="Dish"
+        />
         <div className={styles.title}>
           <Link 
             href={`/dishes/${dish.id}`}

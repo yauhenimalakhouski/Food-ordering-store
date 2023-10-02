@@ -1,5 +1,4 @@
 import { fetchRestaurant } from "@/services/api";
-import Link from "next/link";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { restaurantsImagesUrl } from "@/consts/images_url";
@@ -20,7 +19,6 @@ export default async function RestaurantsLayout({ params: { restaurantId }, chil
         width={1564}
         height={670}
         layout="responsive"
-        aspectRatio="16:9"
         alt="Banner"
       />
       <div className={styles.root}>

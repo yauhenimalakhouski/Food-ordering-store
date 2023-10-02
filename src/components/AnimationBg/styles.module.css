@@ -3,7 +3,7 @@
     /* height: 100vh; */
     height: calc(100vh - 150px);
     font-weight: 100;
-    background: radial-gradient(#883da5,#1f1013);
+    background: radial-gradient(#b10404,#1f1013);
     overflow-y: hidden;
     -webkit-animation: fadeIn 1 1s ease-out;
     -moz-animation: fadeIn 1 1s ease-out;

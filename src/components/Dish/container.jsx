@@ -9,6 +9,8 @@ export const DishContainer = ({ dish, ...props }) => {
   const amount = useSelector((state) => selectDishAmountById(state, dish?.id));
   const dispatch = useDispatch();
 
+
+
   if (!dish) {
     return null;
   }
@@ -16,6 +18,7 @@ export const DishContainer = ({ dish, ...props }) => {
   return (
       <Dish
         dish={dish}
+        dishId ={dish.id}
         amount={amount}
         increment={() => {
           dispatch(cartSlice.actions.incrementDish(dish.id));

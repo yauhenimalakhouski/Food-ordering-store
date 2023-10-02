@@ -16,3 +16,15 @@ export const restaurantsImagesUrl = [
     url: "/flat_iron.jpg",
     },
 ];
+
+
+export const dishesUrl = [
+  {
+    id: 'd75f762a-eadd-49be-8918-ed0daa8dd024',
+    url: "/Chicken_tikka_masala.jpg",
+  },
+  {
+    id: 'c3cb8f92-a2ed-4716-92a1-b6ea813e9049',
+    url: "/Naan.jpg",
+  },
+];
