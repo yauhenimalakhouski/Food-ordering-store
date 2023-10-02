@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./styles.module.css";
 import { Button } from "../Button/component";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { dishesUrl } from "@/consts/images_url";
 
 export const Dish = ({ dish, amount, increment, decrement, className }) => {
@@ -13,16 +13,13 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
     <div className={classNames(styles.root, className)}>
       <div className={styles.dish}>
         <div className={styles.dish}>
-          <div className={styles.image_container}>
-            <Image
-              src={dishImageUrl.url}
-              width={400}
-              height={225}
-              layout="responsive"
-              alt="Dish"
-              className={styles.image}
-            />
-          </div>
+          <Image
+            src={dishImageUrl.url}
+            width={400}
+            height={225}
+            alt="Dish"
+            className={styles.image}
+          />
           <div className={styles.dish_info_container}>
             <div className={styles.title}>
               <Link 

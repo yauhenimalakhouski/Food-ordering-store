@@ -1,6 +1,6 @@
 import { fetchRestaurant } from "@/services/api";
 import styles from "./styles.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { restaurantsImagesUrl } from "@/consts/images_url";
 import { RestaurantNavLink } from "@/components/RestaurnatNavLink/component";
 
