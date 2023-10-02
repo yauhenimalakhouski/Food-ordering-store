@@ -18,7 +18,6 @@ export const DishContainer = ({ dish, ...props }) => {
   return (
       <Dish
         dish={dish}
-        dishId ={dish.id}
         amount={amount}
         increment={() => {
           dispatch(cartSlice.actions.incrementDish(dish.id));
