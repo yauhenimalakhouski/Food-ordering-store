@@ -6,6 +6,9 @@ import { Review } from "../Review/component";
 import styles from "./styles.module.css";
 
 export const Reviews = ({ reviewsFromOtherUsers, currentUserreviews, restaurantId }) => {
+
+
+
   return (
     <div>
       <h3>Reviews</h3>
