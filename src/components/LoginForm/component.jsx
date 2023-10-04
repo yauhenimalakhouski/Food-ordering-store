@@ -2,10 +2,12 @@ import styles from './styles.module.css';
 import classNames from 'classnames';
 
 import { useReducer } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "../Button/component";
 import { authorizationSlice } from "@/store/features/authorization";
+import { selectCurrentUser, selectCurrentUserPassword } from '@/store/features/authorization/selectors';
+import { restoreItems } from '@/utils/local-storage';
 
 const DEFAULT_FORM_VALUE = {
   login: "",
@@ -25,10 +27,17 @@ const reducer = (state, { type, payload } = {}) => {
 };
 
 export const LoginForm = ({ onLogin }) => {
+  const dispatchUser = useDispatch();
+
+
 
   const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
   
-  const dispatchUser = useDispatch();
+  if(restoreItems().currentUserName) {
+    form.login = useSelector(selectCurrentUser);
+    form.password = useSelector(selectCurrentUserPassword);
+  }
+  
 
   return (
     <div className={classNames(styles.root)}>

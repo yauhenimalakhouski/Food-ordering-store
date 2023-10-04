@@ -1,30 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { restoreItems, storeItems } from "@/utils/local-storage";
 
-let currentUserId;
-let currentUserName;
-let userPassword;
-let startSessionTime;
-
-if (typeof window !== 'undefined') {
-  currentUserId = restoreItems().currentUserId;
-  currentUserName = restoreItems().currentUserName;
-  userPassword = restoreItems().userPassword;
-  startSessionTime = restoreItems().startSessionTime;
-}
-
-
 const DEFAULT_STATE = {
-  currentUserId: currentUserId || null,
-  currentUserName: currentUserName || null,
-  userPassword: userPassword || null,
-  startSessionTime: startSessionTime || null,
+  currentUserId: null,
+  currentUserName: null,
+  userPassword: null,
+  startSessionTime: null,
 };
 
 export const authorizationSlice = createSlice({
   name: "authorization",
   initialState: DEFAULT_STATE,
   reducers: {
+    initial: (state) => {
+      state.currentUserId = restoreItems().currentUserId;
+      state.currentUserName = restoreItems().currentUserName;
+      state.userPassword = restoreItems().userPassword;
+      state.startSessionTime = restoreItems().startSessionTime;
+    },
     login: (state, { payload }) => {
       state.currentUserId = Date.now();
       state.currentUserName = payload.login;
