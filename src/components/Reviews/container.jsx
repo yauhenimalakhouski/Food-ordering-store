@@ -12,6 +12,7 @@ export default function ReviewsContainer({restaurantId}){
     return <span>Loading....</span>;
   }
 
+  
   const reviewsFromOtherUsers = reviews.filter((review) => typeof review.userId !== "number");
   const currentUserreviews = reviews.filter((review) => typeof review.userId === "number");
  

@@ -1,5 +1,5 @@
 import { AnimationBg } from "@/components/AnimationBg/component";
-import Link from "next/link";
+
 
 
 export default function Home() {

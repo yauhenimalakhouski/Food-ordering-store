@@ -4,12 +4,20 @@ import { useEffect, useState } from "react";
 import { Button } from "../Button/component"
 
 const LOCAL_STORAGE_KEY = 'theme';
+let themeLocal;
 
 export const ThemeButton = () => {
-    const [theme, setTheme] = useState(localStorage.getItem(LOCAL_STORAGE_KEY) || 'light');
+    if (typeof window !== 'undefined') {
+        themeLocal = localStorage.getItem(LOCAL_STORAGE_KEY);
+    } else {
+        themeLocal = 'light';
+    }
+    const [theme, setTheme] = useState( themeLocal);
 
     useEffect(()=> {
-        localStorage.setItem(LOCAL_STORAGE_KEY, theme);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem(LOCAL_STORAGE_KEY, theme);
+        }
     }, [theme]);
 
     return <Button

@@ -1,13 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { deleteItems, restoreItems, storeItems } from "@/utils/local-storage";
 
-const {currentUserId, currentUserName, userPassword, startSessionTime} = restoreItems();
+if (typeof window !== 'undefined') {
+  const {currentUserId, currentUserName, userPassword, startSessionTime} = restoreItems();
+}
 
+
+// const DEFAULT_STATE = {
+//   currentUserId: currentUserId || null,
+//   currentUserName: currentUserName || null,
+//   userPassword: userPassword || null,
+//   startSessionTime: startSessionTime || null,
+// };
 const DEFAULT_STATE = {
-  currentUserId: currentUserId || null,
-  currentUserName: currentUserName || null,
-  userPassword: userPassword || null,
-  startSessionTime: startSessionTime || null,
+  currentUserId:  null,
+  currentUserName:  null,
+  userPassword: null,
+  startSessionTime:  null,
 };
 
 export const authorizationSlice = createSlice({
@@ -19,7 +28,7 @@ export const authorizationSlice = createSlice({
       state.currentUserName = payload.login;
       state.userPassword = payload.password;
       state.startSessionTime = Date.now();
-      storeItems(state);
+      // storeItems(state);
     },
     logout: (state) => {
       state.currentUserId = null;

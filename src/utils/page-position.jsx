@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 
 
-export const handleClick = (e, path) => {
+export const HandleClick = (e, path) => {
     const router = useRouter();
     e.preventDefault();
     window.scrollTo(0, 0);
