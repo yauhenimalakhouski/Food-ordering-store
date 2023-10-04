@@ -1,11 +1,17 @@
 export const storeItems = (data) => {
-    localStorage.setItem("currentUser", JSON.stringify(data));
+    if (typeof window !== 'undefined') {
+        localStorage.setItem("currentUser", JSON.stringify(data));
+    }    
 }
 
 export const restoreItems =  () => {
-    return JSON.parse(localStorage.getItem("currentUser")) || {};
+    if (typeof window !== 'undefined') {
+        return JSON.parse(localStorage.getItem("currentUser")) || {};
+    }
 }
 
 export const deleteItems = () => {
-    localStorage.removeItem("currentUser");
+    if (typeof window !== 'undefined') {
+        localStorage.removeItem("currentUser");
+    }
 }

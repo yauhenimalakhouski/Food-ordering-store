@@ -4,7 +4,7 @@ import { selectCurrentUser } from "@/store/features/authorization/selectors"
 import Link from "next/link";
 import { useSelector } from "react-redux"
 
-export default function orderPlace(){
+export default function OrderPlace(){
     const currentUser = useSelector(selectCurrentUser);
     return (<main>
         <h2>
