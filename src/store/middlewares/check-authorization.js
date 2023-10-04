@@ -1,4 +1,3 @@
-import { deleteItems } from "@/utils/local-storage";
 import { authorizationSlice } from "../features/authorization";
 import { selectStartSessionTime } from "../features/authorization/selectors";
 import { cartSlice } from "../features/cart";
@@ -26,6 +25,5 @@ export const checkAuthorization =
     }
     alert('Время сеанса закончилось, перезайдите');
     store.dispatch(authorizationSlice.actions.logout());
-    deleteItems();
   };
 
