@@ -7,16 +7,22 @@ const LOCAL_STORAGE_KEY = 'theme';
 let themeLocal;
 
 export const ThemeButton = () => {
-    if (typeof window !== 'undefined') {
-        themeLocal = localStorage.getItem(LOCAL_STORAGE_KEY);
-    } 
-    const [theme, setTheme] = useState( themeLocal || 'light');
+
+    const [theme, setTheme] = useState( 'light');
+    useEffect(()=> {
+        if (typeof window !== 'undefined') {
+            themeLocal = localStorage.getItem(LOCAL_STORAGE_KEY);
+            if(themeLocal) {
+                setTheme(themeLocal);
+            }
+        }
+    }, []);
 
     useEffect(()=> {
         if (typeof window !== 'undefined') {
             localStorage.setItem(LOCAL_STORAGE_KEY, theme);
         }
-    }, [theme, themeLocal]);
+    }, [theme]);
 
     return <Button
                 onClick={ ()=> setTheme(theme ==='light' ? 'dark' : 'light') }

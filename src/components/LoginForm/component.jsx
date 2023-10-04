@@ -29,13 +29,13 @@ const reducer = (state, { type, payload } = {}) => {
 export const LoginForm = ({ onLogin }) => {
   const dispatchUser = useDispatch();
 
-
+  DEFAULT_FORM_VALUE.login = useSelector(selectCurrentUser);
+  DEFAULT_FORM_VALUE.password = useSelector(selectCurrentUserPassword);
 
   const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
   
   
-    form.login = useSelector(selectCurrentUser);
-    form.password = useSelector(selectCurrentUserPassword);
+  
   
   
 
