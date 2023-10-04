@@ -16,7 +16,7 @@ export const ThemeButton = () => {
         if (typeof window !== 'undefined') {
             localStorage.setItem(LOCAL_STORAGE_KEY, theme);
         }
-    }, [theme]);
+    }, [theme, themeLocal]);
 
     return <Button
                 onClick={ ()=> setTheme(theme ==='light' ? 'dark' : 'light') }

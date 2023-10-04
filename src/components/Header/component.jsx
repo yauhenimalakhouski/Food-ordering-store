@@ -49,7 +49,7 @@ export const Header = ({ className }) => {
       </nav>
       <div className={classNames(styles.user_control_buttons)}>
         <LoginButton />
-        <ThemeButton />
+        {/* <ThemeButton /> */}
       </div>
       
     </header>

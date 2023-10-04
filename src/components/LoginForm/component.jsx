@@ -33,10 +33,10 @@ export const LoginForm = ({ onLogin }) => {
 
   const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
   
-  if(restoreItems().currentUserName) {
+  
     form.login = useSelector(selectCurrentUser);
     form.password = useSelector(selectCurrentUserPassword);
-  }
+  
   
 
   return (

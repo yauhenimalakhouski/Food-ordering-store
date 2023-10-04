@@ -10,7 +10,7 @@ export const Tab = ({ title, path }) => {
   <Link 
     href={path}
     className={styles.root}
-    onClick={(path) => HandleClick(path)}
+    // onClick={(path) => HandleClick(path)}
   >
     <span>{title}</span>
   </Link>
