@@ -8,7 +8,7 @@ let localSearch;
 
 export const DishesContainer = ({dishes}) => {
     if (typeof window !== 'undefined') {
-        localSearch = localStorage.getItem(LOCAL_STORAGE_KEY);
+        localSearch = localStorage.getItem(LOCAL_STORAGE_KEY) || "";
     } else {
         localSearch = "";
     }

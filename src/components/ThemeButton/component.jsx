@@ -9,10 +9,8 @@ let themeLocal;
 export const ThemeButton = () => {
     if (typeof window !== 'undefined') {
         themeLocal = localStorage.getItem(LOCAL_STORAGE_KEY);
-    } else {
-        themeLocal = 'light';
-    }
-    const [theme, setTheme] = useState( themeLocal);
+    } 
+    const [theme, setTheme] = useState( themeLocal || 'light');
 
     useEffect(()=> {
         if (typeof window !== 'undefined') {
