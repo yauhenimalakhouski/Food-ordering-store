@@ -11,8 +11,8 @@ export default async function RestaurantsLayout({ params: { restaurantId }, chil
     <div>
       <nav className={styles.navigation}>
         <RestaurantNavLink path={`/restaurants`}>Return to all restaurants</RestaurantNavLink>
-        <RestaurantNavLink path={`/restaurants/${restaurantId}/menu`}>Menu</RestaurantNavLink>
-        <RestaurantNavLink path={`/restaurants/${restaurantId}/reviews`}>Reviews</RestaurantNavLink>
+        <RestaurantNavLink path={`/restaurants/${restaurantId}/menu`} nameForActive = {"menu"}>Menu</RestaurantNavLink>
+        <RestaurantNavLink path={`/restaurants/${restaurantId}/reviews`} nameForActive = {"reviews"}>Reviews</RestaurantNavLink>
       </nav>
       <Image 
         src={restaurantBannerUrl.url}
