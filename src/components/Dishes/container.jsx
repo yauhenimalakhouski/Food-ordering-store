@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Dishes } from "./component";
+import styles from "./styles.module.css";
 
 const LOCAL_STORAGE_KEY = "activeSearch";
 let localSearch;
@@ -24,17 +25,21 @@ export const DishesContainer = ({dishes}) => {
 
     const filteredDishes = dishes.filter(({name}) => {
         return (
-            name.toLowerCase().includes(search)
+            name.toLowerCase().includes(search.toLowerCase())
         );
     });
 
     return (
-        <div>
-            <input
-                value={search || ""}
-                onChange={(event) => setSearch(event.target.value)}
-            />
+        <>
+            <div className={styles.search_bar}>
+                <input
+                    value={search || ""}
+                    onChange={(event) => setSearch(event.target.value)}
+                    className={styles.search_input}
+                    placeholder="Name of dish"
+                />
+            </div>
            <Dishes dishes = {filteredDishes}></Dishes> 
-        </div>   
+        </>   
     )
 }

@@ -2,8 +2,8 @@ import classNames from "classnames";
 import styles from "./styles.module.css";
 import { Button } from "../Button/component";
 import Link from "next/link";
-import Image from "next/legacy/image";
 import { dishesUrl } from "@/consts/images_url";
+import Image from "next/image";
 
 export const Dish = ({ dish, amount, increment, decrement, className }) => {
   const dishImageUrl = dishesUrl.find((el) => dish.id === el.id);
@@ -13,13 +13,18 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
     <div className={classNames(styles.root, className)}>
       <div className={styles.dish}>
         <div className={styles.dish}>
-          <Image
-            src={dishImageUrl.url}
-            width={400}
-            height={225}
-            alt="Dish"
-            className={styles.image}
-          />
+          <Link 
+            href={`/dishes/${dish.id}`}
+            className={styles.image_link}
+          >
+            <Image
+              src={dishImageUrl.url}
+              priority
+              fill= {true}
+              alt="Dish"
+              className={styles.image}
+            />
+          </Link>
           <div className={styles.dish_info_container}>
             <div>
               <Link 
