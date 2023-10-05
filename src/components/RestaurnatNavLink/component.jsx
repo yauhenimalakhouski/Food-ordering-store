@@ -9,10 +9,8 @@ import classNames from 'classnames';
 export const RestaurantNavLink = ({children, path, nameForActive}) => {
     const pathname = usePathname().split('/').pop();
     
-    console.log(pathname)
     return (
         <Link
-            scroll ={true}
             href={path} 
             className = {
                 classNames(styles.root,

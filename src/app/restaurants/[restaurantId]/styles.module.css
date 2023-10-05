@@ -23,4 +23,15 @@
     display: flex;
     background: rgb(20, 18, 18);
 }
- 
+
+.banner_container {
+    position: relative;
+    height: 670px;
+    
+}
+
+.banner {
+    object-fit: cover;
+}
+
+
