@@ -21,7 +21,7 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
             className={styles.image}
           />
           <div className={styles.dish_info_container}>
-            <div className={styles.title}>
+            <div>
               <Link 
                 href={`/dishes/${dish.id}`}
                 className={styles.link}

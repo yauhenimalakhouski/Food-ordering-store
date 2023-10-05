@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 12.5%;
-    background: #363636;
+    background: var(--page-background);
 }
 
 

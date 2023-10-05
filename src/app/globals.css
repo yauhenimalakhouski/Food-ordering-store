@@ -1,5 +1,9 @@
 :root {
   --header-text-color: white;
+  --title-text-color: azure;
+  --dish-title-text-color: rgb(106, 231, 231);
+  --main-text-color: aliceblue;
+  --page-background: #363636;
 }
 
 :root[theme='dark'] {
@@ -19,7 +23,6 @@ html, body {
 }
 
 .main {
-  /* margin: 0 12.5%; */
-	background: #fff;
+	background: #bcc8e2;
 	min-height: calc(100vh - 150px);
 }

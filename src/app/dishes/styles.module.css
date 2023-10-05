@@ -1,0 +1,14 @@
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 12.5%;
+    background: var(--page-background);
+}
+
+.title {
+    font-size: 36px;
+    color: var(--title-text-color);
+}
+
