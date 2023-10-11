@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import { restaurantsImagesUrl } from "@/consts/images_url";
 import { RestaurantNavLink } from "@/components/RestaurnatNavLink/component";
 import Image from "next/image";
+import { Spinner } from "@/components/Spinner/component";
 
 export default async function RestaurantsLayout({ params: { restaurantId }, children }) {
   const restaurant = await fetchRestaurant(restaurantId);
@@ -18,6 +19,8 @@ export default async function RestaurantsLayout({ params: { restaurantId }, chil
         <Image
         src={restaurantBannerUrl.url}
         priority
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0M/P/DwADIQG8SWu0YQAAAABJRU5ErkJggg=="
+        placeholder = 'blur'
         fill ={true}
         alt="Banner"
         className={styles.banner}

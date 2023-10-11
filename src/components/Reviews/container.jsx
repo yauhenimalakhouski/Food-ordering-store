@@ -2,6 +2,7 @@
 
 import { useGetReviewsQuery} from "@/store/services/api";
 import { Reviews } from "./component";
+import { Spinner } from "../Spinner/component";
 
 
 export default function ReviewsContainer({restaurantId}){
@@ -10,7 +11,7 @@ export default function ReviewsContainer({restaurantId}){
   });
 
   if (isLoading) {
-    return <span>Loading....</span>;
+    return <Spinner/>;
   }
 
   const reviewsFromOtherUsers = reviews.filter((review) => typeof review.userId !== "number");
