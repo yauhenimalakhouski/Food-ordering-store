@@ -9,7 +9,7 @@ export default async function DishPage({params: {dishId}}){
     const dishImageUrl = dishesUrl.find((el) => dish.id === el.id);
     return (
         <div className={styles.root}>
-            <h2>{dish.name}</h2>
+            <h2 className={styles.title}>{dish.name}</h2>
             <div className={styles.image_container}>
                 <Image
                     fill = {true}
@@ -18,12 +18,12 @@ export default async function DishPage({params: {dishId}}){
                     className={styles.dish_image}
                 />
             </div>
-            <div>Price: {dish.price}</div>
-            <h3>Ingridients:</h3>
-            <ul>
+            <h3 className={styles.ingridents_title}>Ingridients:</h3>
+            <ul className={styles.ingridents_list}>
                 {dish.ingredients.map((ingredient, index) => {
                     return <li key={index}>{ingredient}</li>
                 })}
             </ul>
+            <div className={styles.price}>Price: {dish.price} $</div>
         </div>
 )};

@@ -70,7 +70,7 @@
     cursor: pointer;
     font-size: 22px;
     font-weight: bold;
-    color: var(--dish-title-text-color);
+    color: var(--secondary-title-text-color);
 }
 
 .image {

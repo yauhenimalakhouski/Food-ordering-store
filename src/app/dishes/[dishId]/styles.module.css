@@ -8,13 +8,40 @@
 }
 
 .image_container {
-    height: 512px;
+    width: 80%;
     aspect-ratio: 16/9;
     position: relative;
 }
 
 .dish_image {
     object-fit: cover;
-    
     border-radius: 20px;
+}
+
+.title {
+    color: var(--title-text-color);
+    font-size: 36px;
+}
+
+.ingridents_title {
+    padding: 0 0 0 20px;
+    color: var(--secondary-title-text-color);
+    font-size: 24px;
+}
+
+.ingridents_list {
+    padding-inline-start: 20px;
+    margin: 0;
+}
+
+.ingridents_list li {
+    font-size: 20px;
+    color: var(--main-text-color);
+}
+
+.price {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(179, 24, 24);
 }
