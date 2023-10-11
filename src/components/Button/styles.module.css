@@ -1,17 +1,20 @@
 .root {
+    width: 100px;
     border: 1px solid #5b5b5b;
-    background-color: white;
-    border-radius: 4px;
+    background-color: rgb(25, 88, 139);
+    border-radius: 10px;
+    color: var(--main-text-color);
     padding: 4px 8px;
     min-width: 25px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
     transition: border-color 0.2s background-color 0.2s;
 }
 
-.root {
-    border-radius: 10px;
-    border: none;
-    font-size: 20px;
-    text-align: center;
+.review_form_btn {
+    margin-top: 10px;
 }
 
 .root:hover {

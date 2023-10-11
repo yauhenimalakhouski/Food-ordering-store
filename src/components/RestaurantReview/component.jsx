@@ -27,8 +27,10 @@ export const RestaurantReview = ({ review, className }) => {
       ) : (
         <Review review={review} />
       )}
-       {/* <Review review={review} /> */}
-      {!isEditable && <Button onClick={() => setIsEditable(true)}>Edit</Button>}
+      {!isEditable && <Button 
+      onClick={() => setIsEditable(true)}
+      type="review_form_btn"
+      >Edit</Button>}
     </div>
   );
 };
