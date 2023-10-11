@@ -10,9 +10,9 @@ export const Reviews = ({ reviewsFromOtherUsers, currentUserreviews, restaurantI
 
 
   return (
-    <div>
-      <h3>Reviews</h3>
-      <div>
+    <div className={styles.root}>
+      <h3 className={styles.title}>Reviews</h3>
+      <div className={styles.reviews_container}>
         {reviewsFromOtherUsers?.map((review) => (
           <Review 
           key = {review.id} 
@@ -21,7 +21,7 @@ export const Reviews = ({ reviewsFromOtherUsers, currentUserreviews, restaurantI
           />
         ))}
       </div>
-      <div>
+      <div className={styles.reviews_container}>
         {currentUserreviews?.map((review) => (
           <RestaurantReview
             key={review.id}

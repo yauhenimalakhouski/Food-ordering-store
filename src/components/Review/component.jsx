@@ -12,9 +12,11 @@ export const Review = ({ review, className }) => {
 
   return (
     <div className={classNames(className, styles.root)}>
-      <UserContainer userId={review.userId} />
-      <div className={styles.rating}>Rating: {review.rating}</div>
-      <span className={styles.text}>{review.text}</span>
+      <div className={styles.user_and_rating_wrapper}>
+        <UserContainer userId={review.userId} />
+        <div className={styles.rating}>Rating: {review.rating}</div>
+      </div>
+      <div className={styles.text}>Review: {review.text}</div>
     </div>
   );
 };

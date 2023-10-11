@@ -18,7 +18,7 @@ export const UserContainer = ({ userId }) => {
   const reviewUser = user?.name || localData.currentUserName;
 
   if (isFetching) {
-    return <div>Loading...</div>;
+    return <div>.....</div>;
   }
 
   if (!reviewUser) {
