@@ -2,10 +2,11 @@ import { fetchRestaurantDishs } from "@/services/api";
 
 import { Menu } from "./component";
 import { Suspense } from "react";
+import { Spinner } from "../Spinner/component";
 
 export default function MenuContainer({restaurantId}){
   return (
-    <Suspense fallback={<div>!!!!!!!!Loading...</div>}>
+    <Suspense fallback={<Spinner/>}>
       <MenuList restaurantId={restaurantId}/>
     </Suspense>
   )
