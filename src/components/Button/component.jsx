@@ -17,6 +17,7 @@ export const Button = ({ children, onClick, disabled, type, switchType, classNam
         [styles.light]: switchType ==="light",
         [styles.auth_submit]: type ==="auth_submit",
         [styles.review_form_btn]: type ==="review_form_btn",
+        [styles.btn_confirm]: type ==="btn_confirm",
         })}>
       {children}
     </button>

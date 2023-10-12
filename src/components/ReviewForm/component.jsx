@@ -44,7 +44,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
     <div className={styles.root}>
       <form method="post" action="/">
       {!review?.id && (
-        <div className={styles.field}>
+        <div>
           <label htmlFor="name" className={styles.label}>
             <span className={styles.required}>Name: *</span>
             <input
@@ -64,7 +64,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
           </label>
         </div>
       )}
-      <div className={styles.field}>
+      <div>
         <label htmlFor="rating" className={styles.label}>
           <span className={styles.required}>Rating: *</span>  
           <input
@@ -83,14 +83,13 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
           />
         </label>
       </div>
-
-      <div className={styles.field}>
+      <div>
         <label htmlFor="review" className={styles.label}>
           <span className={styles.required}>Review: *</span> 
           <textarea
             className={styles.textarea}
             id="review"
-            name="rating"
+            name="review"
             placeholder="Please write your review here."
             required="required"
             tabIndex="3"
@@ -103,10 +102,8 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
           </textarea>
         </label>
       </div>
-      
-      
       <Button
-        className={styles.button}
+        type='btn_confirm'
         disabled = {!userName}
         onClick={() => {
           onSaveForm({

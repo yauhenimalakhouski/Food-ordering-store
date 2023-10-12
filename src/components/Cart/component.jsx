@@ -12,15 +12,15 @@ export const Cart = ({dishes, totalPrice}) => {
 
     return (
         <div className={classNames(styles.root)}>
-            <h2>Cart</h2>
-            <hr />
+            <h2 className={styles.title}>Cart</h2>
             <ul className={classNames(styles.order_list)}>
                 {dishes.map((dish)=> (
                     <DishContainer key={dish.id} dish={dish} />
                 ))}
             </ul>
-            <div>
-                <span>Total: </span>
+            <h3 className={styles.secondary_title}>Finish order</h3>
+            <div className={styles.total_amount}>
+                <span>Total amount: </span>
                 <span>{totalPrice} $</span>
             </div>
             <OrderForm/>
