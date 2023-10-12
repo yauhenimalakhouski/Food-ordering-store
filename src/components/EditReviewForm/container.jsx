@@ -1,6 +1,7 @@
 import { ReviewForm } from "../ReviewForm/component";
 import { useUpdateReviewMutation } from "../../store/services/api";
 import { useEffect } from "react";
+import { Spinner } from "../Spinner/component";
 
 export const EditReviewFormContainer = ({
   review,
@@ -16,7 +17,7 @@ export const EditReviewFormContainer = ({
   }, [isSuccess, onSaveForm]);
 
   if (isLoading) {
-    return <span>Saving...</span>;
+    return <Spinner/>;
   }
 
   return (

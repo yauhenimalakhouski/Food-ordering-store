@@ -1,11 +1,12 @@
 import { useCreateReviewMutation } from "@/store/services/api";
 import { NewReviewForm } from "./component";
+import { Spinner } from "../Spinner/component";
 
 export const NewReviewFormContainer = ({ restaurantId }) => {
   const [createReview, { isLoading }] = useCreateReviewMutation();
 
   if (isLoading) {
-    return <span>Saving...</span>;
+    return <Spinner/>;
   }
 
   return (

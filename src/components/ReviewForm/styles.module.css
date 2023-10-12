@@ -5,14 +5,11 @@
     border-radius:10px;
  }
 
-
-
  .input,     
  .textarea,   
  .label { 
     font-size: 15px;  
     margin-bottom: 2px;
-    font-family: Arial, san-serif;
  } 
 
  .input,      
@@ -42,7 +39,7 @@
     width:100%;
     border:none;
     background:#991D57;
-    background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    background-image:linear-gradient(to bottom, #8C1C50 0%, #991D57 52%);
     color:#FFF;
     margin:0 0 5px;
     padding:10px;
@@ -50,7 +47,7 @@
  }
 
  .button:hover {
-    background-image:linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+    background-image:linear-gradient(to bottom, #9C215A 0%, #A82767 52%);
     transition:background-color 0.3s ease-in-out;
  }
 
