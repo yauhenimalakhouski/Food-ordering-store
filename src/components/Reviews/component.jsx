@@ -30,6 +30,10 @@ export const Reviews = ({ reviewsFromOtherUsers, currentUserreviews, restaurantI
           />
         ))}
       </div>
+      <div>
+        <h1 className={styles.title_form}>Nice to Meet You!</h1> 
+        <h4 className={styles.secondary_title}>You can leave your feedback here!</h4> 
+      </div>
       <NewReviewFormContainer restaurantId={restaurantId} />
     </div>
   );

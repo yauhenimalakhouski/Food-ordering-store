@@ -41,40 +41,72 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
   const userId = useSelector(selectCurrentUserId);
 
   return (
-    <div>
+    <div className={styles.root}>
+      <form method="post" action="/">
       {!review?.id && (
         <div className={styles.field}>
-          <label>Name:</label>
-          <input
-            disabled = {!userName}
-            value={form.name}
-            onChange={(event) =>
-              dispatch({ type: "setName", payload: event.target.value })
-            }
-          />
+          <label htmlFor="name" className={styles.label}>
+            <span className={styles.required}>Name: *</span>
+            <input
+              className={styles.input}
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required="required"
+              tabIndex="1"
+              disabled = {!userName}
+              value={form.name}
+              onChange={(event) =>
+                dispatch({ type: "setName", payload: event.target.value })
+              }
+            />
+          </label>
         </div>
       )}
       <div className={styles.field}>
-        <label>Text</label>
-        <input
-          disabled = {!userName}
-          value={form.text}
-          onChange={(event) =>
-            dispatch({ type: "setText", payload: event.target.value })
-          }
-        />
+        <label htmlFor="rating" className={styles.label}>
+          <span className={styles.required}>Rating: *</span>  
+          <input
+            className={styles.input}
+            type="text"
+            id="rating"
+            name="rating"
+            placeholder="Rating"
+            required="required"
+            tabIndex="2"
+            disabled = {!userName}
+            value={form.rating}
+            onChange={(event) =>
+              dispatch({ type: "setRating", payload: event.target.value })
+            }
+          />
+        </label>
       </div>
+
       <div className={styles.field}>
-        <label>Rating</label>
-        <input
-          disabled = {!userName}
-          value={form.rating}
-          onChange={(event) =>
-            dispatch({ type: "setRating", payload: event.target.value })
-          }
-        />
+        <label htmlFor="review" className={styles.label}>
+          <span className={styles.required}>Review: *</span> 
+          <textarea
+            className={styles.textarea}
+            id="review"
+            name="rating"
+            placeholder="Please write your review here."
+            required="required"
+            tabIndex="3"
+            disabled = {!userName}
+            value={form.text}
+            onChange={(event) =>
+              dispatch({ type: "setText", payload: event.target.value })
+            }
+          >
+          </textarea>
+        </label>
       </div>
+      
+      
       <Button
+        className={styles.button}
         disabled = {!userName}
         onClick={() => {
           onSaveForm({
@@ -87,6 +119,7 @@ export const ReviewForm = ({ review, onSaveForm, onCancelForm }) => {
         Save
       </Button>
       {onCancelForm && <Button onClick={onCancelForm}>Cancel</Button>}
+      </form>
     </div>
   );
 };

@@ -1,11 +1,11 @@
 .root {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
     padding-bottom: 20px;
+    margin-left: 50px;
 }
 
 .reviews_container {
@@ -23,4 +23,12 @@
     margin: 10px 0;
     text-transform: uppercase;
     color: var(--title-text-color);
+    align-self: center;
 }
+
+ .secondary_title,
+ .title_form {
+    margin: 0 0 20px 0;
+    margin: 10px 0;
+    color: var(--title-text-color);
+ }
