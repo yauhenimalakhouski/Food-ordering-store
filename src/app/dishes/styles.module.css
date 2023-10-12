@@ -1,11 +1,11 @@
 .root {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     margin: 0 12.5%;
     padding-bottom: 50px;
     background: var(--page-background);
+    min-height: calc(100vh - 150px);
 }
 
 .title {
