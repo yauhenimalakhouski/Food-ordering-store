@@ -1,7 +1,7 @@
 import { DishContainer } from "../Dish/container"
 import styles from "./styles.module.css";
 import classNames from "classnames";
-import { LinkToCart } from "../LinkToCart/component";
+import { LinkTo } from "../LinkTo/component";
 
 export const Menu = ({dishes}) => {
     return (
@@ -12,6 +12,6 @@ export const Menu = ({dishes}) => {
                 <DishContainer key={dish.id} dish={dish} className={styles.dish}>{dish.name}</DishContainer>
             ))}
             </div>
-            <LinkToCart/>
+            <LinkTo to={`/cart`} text={"Go to your cart"}/>
         </div>
 )};

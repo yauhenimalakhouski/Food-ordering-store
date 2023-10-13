@@ -2,12 +2,13 @@ import { DishContainer } from "../Dish/container";
 import classNames from "classnames";
 import styles from './styles.module.css';
 import { OrderForm } from "../OrderForm/component";
+import { EmptyCart } from "../EmptyCart/component";
 
 
 export const Cart = ({dishes, totalPrice}) => {
 
     if(dishes.length === 0) {
-        return <div>Your cart is empty</div>;
+        return <EmptyCart/>;
     }
 
     return (
