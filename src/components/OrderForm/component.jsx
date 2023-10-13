@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../Button/component";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import { Spinner } from "../Spinner/component";
 
 const DEFAULT_VALUE = {
     name: "",

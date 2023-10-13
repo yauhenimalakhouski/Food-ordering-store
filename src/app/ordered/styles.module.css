@@ -1,21 +1,21 @@
 .root {
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     margin: 0 12.5%;
-    background: var(--page-background);
     min-height: calc(100vh - 150px);
+    background: var(--page-background);
 }
 
 .title {
     text-align: center;
+    width: 100%;
     font-size: 30px;
     font-weight: bold;
     margin: 20px 0;
+    text-transform: uppercase;
     color: var(--title-text-color);
-    padding-bottom: 20px;
 }
 
 .secondary_title {
@@ -26,4 +26,3 @@
     margin: 20px 0;
     color: var(--secondary-title-text-color);
 }
-

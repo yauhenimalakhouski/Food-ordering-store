@@ -1,7 +1,7 @@
 .root {
   display: inline-flex;
   height: 60px;
-  width: 200px;
+  width: 250px;
   border: 2px solid #BFC0C0;
   margin: 20px 20px 20px 20px;
   color: #BFC0C0;
@@ -25,7 +25,7 @@
 .slide {
     width: 100%;
     height: 100%;
-    left: -200px;
+    left: -250px;
     background: #BFC0C0;
     position: absolute;
     transition: all .35s ease-Out;
@@ -45,17 +45,18 @@
     color: #BFC0C0;
     text-decoration: none;
     letter-spacing: 1px;
+    padding: 15px;
 }
 
 
 .slide {
     width: 100%;
     height: 100%;
-    left: -200px;
+    left: -250px;
     background: #BFC0C0;
     position: absolute;
     transition: all .35s ease-Out;
     bottom: 0;
   }
 
-  
+
