@@ -359,20 +359,38 @@
   @media only all and (max-width: 1024px) {
 
 		.button {
-      width: 40%;
+      font-size: 1.5em;
+      height: 80px;
     }	
+
+    .header {
+      font-size: 1.5em;
+    }
 	}
 
   @media only all and (max-width: 640px) {
 
 		.button {
-      width: 60%;
+      width: 40%;
+      font-size: 1.2em;
+      height: 70px;
     }	
+
+    .header {
+      font-size: 1.2em;
+    }
 	}
 
   @media only all and (max-width: 425px) {
 
 		.button {
-      width: 80%;
+      width: 50%;
+      font-size: 1em;
+      height: 50px;
     }	
+
+    .header {
+      font-size: 1em;
+      transform: translate(-40%, -40%);
+    }
 	}

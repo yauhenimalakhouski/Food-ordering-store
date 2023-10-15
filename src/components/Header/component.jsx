@@ -60,21 +60,30 @@ export const Header = ({ className }) => {
             [styles.mobile_nav_list_active]: isMenuOpened,
           })}
         >
-          <li>
+          <li className={styles.mobile_list_el}>
             <Link
               href={"/restaurants"}
               className={classNames(styles.mobile_link)}
+              onClick={() => setIsMenuOpened(false)}
             >
               Restaurants
             </Link>
           </li>
-          <li>
-            <Link href={"/dishes"} className={classNames(styles.mobile_link)}>
+          <li className={styles.mobile_list_el}>
+            <Link
+              href={"/dishes"}
+              className={classNames(styles.mobile_link)}
+              onClick={() => setIsMenuOpened(false)}
+            >
               Dishes
             </Link>
           </li>
-          <li>
-            <Link href={"/cart"} className={classNames(styles.mobile_link)}>
+          <li className={styles.mobile_list_el}>
+            <Link
+              href={"/cart"}
+              className={classNames(styles.mobile_link)}
+              onClick={() => setIsMenuOpened(false)}
+            >
               Cart
             </Link>
           </li>

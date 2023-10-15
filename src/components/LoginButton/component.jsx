@@ -21,7 +21,7 @@ export const LoginButton = ({className}) => {
   return (
     <>
       <div className={classNames(styles.root)}>
-        {currentUser && <span>{currentUser}</span>}
+        {currentUser && <span className={styles.user_name}>{currentUser}</span>}
         <Button
           onClick={() => {
             if (typeof window !== "undefined") {

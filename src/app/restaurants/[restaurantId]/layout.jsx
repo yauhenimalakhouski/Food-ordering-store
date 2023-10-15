@@ -3,7 +3,6 @@ import styles from "./styles.module.css";
 import { restaurantsImagesUrl } from "@/consts/images_url";
 import { RestaurantNavLink } from "@/components/RestaurnatNavLink/component";
 import Image from "next/image";
-import { Spinner } from "@/components/Spinner/component";
 
 export default async function RestaurantsLayout({ params: { restaurantId }, children }) {
   const restaurant = await fetchRestaurant(restaurantId);

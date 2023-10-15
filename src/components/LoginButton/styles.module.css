@@ -9,3 +9,15 @@
     text-transform: capitalize;
 }
 
+.user_name {
+    position: absolute;
+    top:10px;
+    right: 10px;
+}
+
+@media only all and (max-width: 1024px) {
+    .root {
+        font-size: 16px;
+    }
+}
+

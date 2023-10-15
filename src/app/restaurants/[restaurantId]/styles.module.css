@@ -25,8 +25,9 @@
 }
 
 .banner_container {
+    width: 100%;
     position: relative;
-    height: 670px;
+    aspect-ratio: 16/7;
     
 }
 
@@ -34,4 +35,18 @@
     object-fit: cover;
 }
 
+@media only all and (max-width: 1440px) {
+
+    .root {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media only all and (max-width: 1024px) {
+
+    .root {
+        margin: 0;
+    }
+}
 

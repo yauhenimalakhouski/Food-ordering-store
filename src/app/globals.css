@@ -26,3 +26,10 @@ html, body {
 	background: #bcc8e2;
 	min-height: calc(100vh - 150px);
 }
+
+@media only all and (max-width: 1440px) {
+
+  .main {
+      background: #363636;
+  }
+}

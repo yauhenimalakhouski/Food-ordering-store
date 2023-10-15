@@ -32,3 +32,10 @@
   margin: 10px 0;
   color: var(--title-text-color);
 }
+
+@media only all and (max-width: 1440px) {
+  .root {
+    margin-left: 0;
+    align-items: center;
+  }
+}
