@@ -1,173 +1,205 @@
 .root {
-    width: 100px;
-    border: 1px solid #5b5b5b;
-    background-color: rgb(25, 88, 139);
-    border-radius: 10px;
-    color: var(--main-text-color);
-    padding: 4px 8px;
-    min-width: 25px;
-    border: none;
-    font-size: 16px;
-    text-align: center;
-    font-weight: bold;
-    transition: border-color 0.2s background-color 0.2s;
+  width: 100px;
+  border: 1px solid #5b5b5b;
+  background-color: rgb(25, 88, 139);
+  border-radius: 10px;
+  color: var(--main-text-color);
+  padding: 4px 8px;
+  min-width: 25px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  transition: border-color 0.2s background-color 0.2s;
 }
 
 .review_form_btn {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .root:hover {
-    cursor: pointer;
-} 
+  cursor: pointer;
+}
 
 .tabs {
-    min-width: 100px;
-    height: 30px;
- }
+  min-width: 100px;
+  height: 30px;
+}
 
- .authoriazation  {
-    color: white;
-    width: 150px;
-    height: 30px;
-    background-color: #FFA935;
+.authoriazation {
+  color: white;
+  width: 150px;
+  height: 30px;
+  background-color: #ffa935;
 }
 
 .auth_submit {
-    text-transform: uppercase;
-    font-size: 20px;
-    display: block;
-    padding: 1em;
-    width: 30%;
-    box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
-    background: #ffbf00;
-    background: linear-gradient(to bottom, #ffbf00 0%, #fa9f17 100%);
-        border: 0;
-        border-radius: 30px;
-        color: #fff;
-        margin-top: 50px;
-        cursor: pointer;
-        font-size: 0.85em;
-        font-weight: 500;
-        text-shadow: -1px -1px #b86200,
-                0 1px 0 #ecb76b;
-  }
-
-
+  text-transform: uppercase;
+  font-size: 20px;
+  display: block;
+  padding: 1em;
+  width: 30%;
+  box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.5);
+  background: #ffbf00;
+  background: linear-gradient(to bottom, #ffbf00 0%, #fa9f17 100%);
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  margin-top: 50px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 500;
+  text-shadow:
+    -1px -1px #b86200,
+    0 1px 0 #ecb76b;
+}
 
 .btn_minus {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: url("images/Btn_minus.svg") no-repeat 50% 50% #1ae41a;
-    border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: url("images/Btn_minus.svg") no-repeat 50% 50% #1ae41a;
+  border: none;
 }
 
 .btn_plus {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: url("images/Btn_plus.svg") no-repeat 50% 50% #1ae41a;
-    border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: url("images/Btn_plus.svg") no-repeat 50% 50% #1ae41a;
+  border: none;
 }
 
 .tab {
-    text-decoration: none;
-    color: white;
-    vertical-align: middle;
-    padding: 10px 30px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#9EEFE1), color-stop(51%, #4830F0), to(#9EEFE1));
-    background-image: -o-linear-gradient(left, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
-    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
-    background-size: 200% auto;
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-            box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
-    margin: 0 20px;
-    cursor: pointer;
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#9eefe1),
+    color-stop(51%, #4830f0),
+    to(#9eefe1)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    #9eefe1 0%,
+    #4830f0 51%,
+    #9eefe1 100%
+  );
+  background-image: linear-gradient(
+    to right,
+    #9eefe1 0%,
+    #4830f0 51%,
+    #9eefe1 100%
+  );
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin: 0 20px;
+  cursor: pointer;
 }
 
 .tab:hover {
-    background-position: right center;
+  background-position: right center;
 }
 
 .btn_theme {
-    width: 30px;
-	height: 30px;
-	font-weight: bold;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-	border-radius: 5px;
-	background-size: 75%;
-    padding: 5px;
-	position: absolute;
-	top: 35px;
-	right: 230px;
-	-webkit-box-shadow: 2px 2px 2px 1px rgba(245, 245, 245, 0.5);
-	        box-shadow: 2px 2px 2px 1px rgba(245, 245, 245, 0.5);
-	cursor: pointer;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  background-size: 75%;
+  padding: 5px;
+  /* position: absolute;
+  top: 35px;
+  right: 230px; */
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(245, 245, 245, 0.5);
+  box-shadow: 2px 2px 2px 1px rgba(245, 245, 245, 0.5);
+  cursor: pointer;
 }
 
 .btn_theme {
-    width: 30px;
-	height: 30px;
-	font-weight: bold;
-    appearance: none;
-	border-radius: 5px;
-	background-size: 75%;
-    padding: 5px;
-	position: absolute;
-	top: 35px;
-	right: 230px;
-	cursor: pointer;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  appearance: none;
+  border-radius: 5px;
+  background-size: 75%;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .btn_theme.dark {
-    background: url("images/moon-active.svg") no-repeat 50% 50% azure;
-    color: azure;
-    outline: solid 1px violet ;
+  background: url("images/moon-active.svg") no-repeat 50% 50% azure;
+  color: azure;
+  outline: solid 1px violet;
 }
 
 .btn_theme.light {
-    background: url("images/sun-active.svg") no-repeat 50% 50% rgb(0, 0, 0, 0.95);
-    color: rgba(8, 8, 8, 0.95);
-    outline: solid 1px azure ;
+  background: url("images/sun-active.svg") no-repeat 50% 50% rgb(0, 0, 0, 0.95);
+  color: rgba(8, 8, 8, 0.95);
+  outline: solid 1px azure;
 }
 
 .btn_confirm {
-    cursor:pointer;
-    width:100%;
-    border:none;
-    background:#991D57;
-    background-image:linear-gradient(to bottom, #8C1C50 0%, #991D57 52%);
-    color:#FFF;
-    margin:0 0 5px;
-    padding:10px;
-    border-radius:5px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #991d57;
+  background-image: linear-gradient(to bottom, #8c1c50 0%, #991d57 52%);
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .btn_confirm:hover {
-    background-image:linear-gradient(to bottom, #9C215A 0%, #A82767 52%);
-    transition:background-color 0.3s ease-in-out;
- }
+  background-image: linear-gradient(to bottom, #9c215a 0%, #a82767 52%);
+  transition: background-color 0.3s ease-in-out;
+}
 
- .btn_confirm:active {
-    box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
- }
+.btn_confirm:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 
 .root:disabled {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .root:disabled:hover {
-    border-color: #5b5b5b;
-    background-color: white;
-    cursor: default;
+  border-color: #5b5b5b;
+  background-color: white;
+  cursor: default;
+}
+
+.mobile_menu {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background-size: 75%;
+  padding: 5px;
+  cursor: pointer;
+  background: url("images/icons8-nav-menu.png") no-repeat 50% 50% rgb(28, 41, 41);
+  background-size: 100%;
+  outline: solid 1px rgb(54, 75, 45);
+}
+
+
+@media only all and (max-width: 1024px) {
+  .authoriazation {
+    width: 100px;
+  }
 }
