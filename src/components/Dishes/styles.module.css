@@ -2,6 +2,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 1fr;
     gap: 20px;
     padding: 0 20px;
 }
@@ -28,4 +29,37 @@
 	color: black;
 	outline: none;
 	background: white;
+}
+
+
+@media only all and (max-width: 1440px) {
+	.search_bar {
+		margin: 0 15% 50px;
+		width: 70%;
+	}
+}
+
+@media only all and (max-width: 1024px) {
+    .root{
+		width: 70%;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only all and (max-width: 640px) {
+	.root{
+		width: 100%;
+		gap: 10px;
+	}
+
+	.search_bar {
+		margin: 0 5% 30px;
+		width: 90%;
+	}
+}
+
+@media only all and (max-width: 425px) {
+	.root{
+		width: 100%;
+	}
 }

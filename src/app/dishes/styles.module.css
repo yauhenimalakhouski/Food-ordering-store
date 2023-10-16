@@ -13,3 +13,10 @@
     color: var(--title-text-color);
 }
 
+@media only all and (max-width: 1440px) {
+    .root {
+        margin: 0 0%;
+    }
+    
+}
+

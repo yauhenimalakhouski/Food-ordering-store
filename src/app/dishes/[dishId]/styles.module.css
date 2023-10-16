@@ -45,3 +45,25 @@
     font-weight: bold;
     color: rgb(179, 24, 24);
 }
+
+@media only all and (max-width: 1440px) {
+    .root {
+        margin: 0;
+    }
+  }
+  
+  @media only all and (max-width: 1024px) {
+   
+  }
+  
+  @media only all and (max-width: 640px) {
+    .image_container {
+        width: 90%;
+    }
+  }
+  
+  @media only all and (max-width: 425px) {
+    .image_container {
+        width: 95%;
+    }
+  }

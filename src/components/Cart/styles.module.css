@@ -34,6 +34,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
     align-items: center;
     justify-content: center;
     padding: 0 20px 20px;
@@ -46,3 +47,28 @@
     font-weight: bold;
     color: rgb(212, 235, 11);
 }
+
+@media only all and (max-width: 1440px) {
+    .root{
+        margin: 0;
+        width: 100%;
+    }
+  }
+  
+  @media only all and (max-width: 1024px) {
+    .order_list {
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  @media only all and (max-width: 640px) {
+    .order_list {
+        width: 100%;
+        gap: 10px;
+    }
+  }
+  
+  @media only all and (max-width: 425px) {
+
+  }
