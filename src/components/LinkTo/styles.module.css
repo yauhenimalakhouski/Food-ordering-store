@@ -2,9 +2,9 @@
   display: inline-flex;
   height: 60px;
   width: 250px;
-  border: 2px solid #BFC0C0;
+  border: 2px solid #bfc0c0;
   margin: 20px 20px 20px 20px;
-  color: #BFC0C0;
+  color: #bfc0c0;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 16px;
@@ -18,45 +18,41 @@
 }
 
 .root .link {
-    position: relative;
-    transition: all .35s ease-Out;
-  }
-
-.slide {
-    width: 100%;
-    height: 100%;
-    left: -250px;
-    background: #BFC0C0;
-    position: absolute;
-    transition: all .35s ease-Out;
-    bottom: 0;
-  }
-  
-  .root:hover .slide {
-    left: 0;
-  }
-  
-  .root:hover a {
-    color: #2D3142;
-  }
-  
-
-.link {
-    color: #BFC0C0;
-    text-decoration: none;
-    letter-spacing: 1px;
-    padding: 15px;
+  position: relative;
+  transition: all 0.35s ease-Out;
 }
 
+.slide {
+  width: 100%;
+  height: 100%;
+  left: -250px;
+  background: #bfc0c0;
+  position: absolute;
+  transition: all 0.35s ease-Out;
+  bottom: 0;
+}
+
+.root:hover .slide {
+  left: 0;
+}
+
+.root:hover a {
+  color: #2d3142;
+}
+
+.link {
+  color: #bfc0c0;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 15px;
+}
 
 .slide {
-    width: 100%;
-    height: 100%;
-    left: -250px;
-    background: #BFC0C0;
-    position: absolute;
-    transition: all .35s ease-Out;
-    bottom: 0;
-  }
-
-
+  width: 100%;
+  height: 100%;
+  left: -250px;
+  background: #bfc0c0;
+  position: absolute;
+  transition: all 0.35s ease-Out;
+  bottom: 0;
+}

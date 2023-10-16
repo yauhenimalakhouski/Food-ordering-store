@@ -1,54 +1,53 @@
 .root {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    outline: solid 1px gray;
-    padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  outline: solid 1px gray;
+  padding: 10px 20px;
 }
 
 .user_and_rating_wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .user {
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--title-text-color);
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--title-text-color);
 }
 
 .rating {
-    font-size: 22px;
-    font-weight: bold;
-    color: rgb(179, 24, 24);
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(179, 24, 24);
 }
 
 .text {
-    text-overflow: ellipsis;
-    font-size: 20px;
-    color: var(--main-text-color);
-    overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  color: var(--main-text-color);
+  overflow: hidden;
 }
 
-  
-  @media only all and (max-width: 640px) {
-    .rating {
-        font-size: 18px;
-    }
-
-    .text {
-        font-size: 16px;
-    }
+@media only all and (max-width: 640px) {
+  .rating {
+    font-size: 18px;
   }
-  
-  @media only all and (max-width: 425px) {
-    .rating {
-        font-size: 16px;
-    }
 
-    .text {
-        font-size: 14px;
-    }
+  .text {
+    font-size: 16px;
   }
+}
+
+@media only all and (max-width: 425px) {
+  .rating {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

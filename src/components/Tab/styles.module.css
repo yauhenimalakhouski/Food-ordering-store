@@ -39,7 +39,7 @@
 }
 
 @media only all and (max-width: 1440px) {
-  .root{
+  .root {
     width: 60%;
     font-size: 1.25rem;
     padding: 1rem 2.5rem;
@@ -47,23 +47,22 @@
 }
 
 @media only all and (max-width: 1024px) {
-  .root{
+  .root {
     width: 80%;
   }
 }
 
 @media only all and (max-width: 640px) {
-  .root{
+  .root {
     width: 80%;
     font-size: 1rem;
     padding: 1rem 2rem;
     height: 52px;
   }
-  
 }
 
 @media only all and (max-width: 425px) {
-  .root{
+  .root {
     height: 45px;
     font-size: 0.75rem;
     padding: 1rem 1.25rem;

@@ -189,11 +189,11 @@
   background-size: 75%;
   padding: 5px;
   cursor: pointer;
-  background: url("images/icons8-nav-menu.png") no-repeat 50% 50% rgb(28, 41, 41);
+  background: url("images/icons8-nav-menu.png") no-repeat 50% 50%
+    rgb(28, 41, 41);
   background-size: 100%;
   outline: solid 1px rgb(54, 75, 45);
 }
-
 
 @media only all and (max-width: 1024px) {
   .authoriazation {
@@ -206,10 +206,9 @@
     width: 15px;
     height: 15px;
   }
-  
+
   .btn_plus {
     width: 15px;
     height: 15px;
   }
-
 }

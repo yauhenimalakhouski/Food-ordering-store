@@ -6,7 +6,7 @@ import { Button } from "../Button/component";
 const LOCAL_STORAGE_KEY = "theme";
 let themeLocal;
 
-export const ThemeButton = ({className}) => {
+export const ThemeButton = ({ className }) => {
   const [theme, setTheme] = useState("dark");
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,7 +28,7 @@ export const ThemeButton = ({className}) => {
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       type={`btn_theme`}
       switchType={`${theme}`}
-      className = {className}
+      className={className}
     />
   );
 };

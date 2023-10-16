@@ -11,7 +11,9 @@ export async function fetchRestaurants() {
 }
 
 export async function fetchRestaurant(restaurantId) {
-  const response = await fetch(`http://localhost:3001/api/restaurant/${restaurantId}`);
+  const response = await fetch(
+    `http://localhost:3001/api/restaurant/${restaurantId}`
+  );
 
   if (!response.ok) {
     throw new Error("Error");
@@ -21,7 +23,9 @@ export async function fetchRestaurant(restaurantId) {
 }
 
 export async function fetchRestaurantDishs(restaurantId) {
-  const response = await fetch(`http://localhost:3001/api/dishes?restaurantId=${restaurantId}`);
+  const response = await fetch(
+    `http://localhost:3001/api/dishes?restaurantId=${restaurantId}`
+  );
 
   if (!response.ok) {
     throw new Error("Error");
@@ -43,9 +47,12 @@ export async function fetchAllDishs() {
 }
 
 export async function fetchRestaurantReviews(restaurantId) {
-  const response = await fetch(`http://localhost:3001/api/reviews?restaurantId=${restaurantId}`, {
-    next: { tags: ["config"] },
-  });
+  const response = await fetch(
+    `http://localhost:3001/api/reviews?restaurantId=${restaurantId}`,
+    {
+      next: { tags: ["config"] },
+    }
+  );
 
   if (!response.ok) {
     throw new Error("Error");

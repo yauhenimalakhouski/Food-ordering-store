@@ -1,29 +1,28 @@
 .root {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 12.5%;
-    background: var(--page-background);
-    min-height: calc(100vh - 150px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 12.5%;
+  background: var(--page-background);
+  min-height: calc(100vh - 150px);
 }
 
 .title {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: var(--title-text-color);
-    padding-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--title-text-color);
+  padding-bottom: 20px;
 }
 
 .secondary_title {
-    text-align: center;
-    width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: var(--secondary-title-text-color);
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--secondary-title-text-color);
 }
-

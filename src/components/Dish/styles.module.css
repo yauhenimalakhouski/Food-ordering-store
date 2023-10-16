@@ -1,157 +1,154 @@
 .root {
-    width: 100%;
-    display: flex;
-    flex-grow: 1;
-    align-self: start;
-    outline: solid 1px gray; 
-    border-radius: 20px;
-    padding: 10px;
-    background: rgb(5, 64, 78, 0.3);
-    height: 100%;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  align-self: start;
+  outline: solid 1px gray;
+  border-radius: 20px;
+  padding: 10px;
+  background: rgb(5, 64, 78, 0.3);
+  height: 100%;
 }
 
 .dish_wrapper {
-    width: 100%;
-    display: flex;
-    flex-grow: 1;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  gap: 20px;
 }
 
 .dish {
-    width: 100%;
-    display: flex;
-    flex-grow: 1;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  gap: 20px;
 }
 
 .dish_count_container {
-    width: 23%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    justify-self: center;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  justify-self: center;
 }
 
 .dish_info_container {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .buttons_count_container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
 }
 
 .title,
 .dish_count {
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--title-text-color);
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--title-text-color);
 }
 
 .dish_ingredients {
-    font-size: 20px;
-    color: var(--main-text-color);
+  font-size: 20px;
+  color: var(--main-text-color);
 }
 
 .dish_price {
-    font-size: 22px;
-    font-weight: bold;
-    color: rgb(179, 24, 24);
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(179, 24, 24);
 }
 
 .image_link {
-    display: block;
-    position: relative;
-    width: 50%;
-    aspect-ratio: 16/9;
+  display: block;
+  position: relative;
+  width: 50%;
+  aspect-ratio: 16/9;
 }
 
 .link {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--secondary-title-text-color);
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--secondary-title-text-color);
 }
 
 .image {
-    border-radius: 10px;
-    object-fit: cover;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 @media only all and (max-width: 1440px) {
-    .dish {
-        gap: 10px;
-    }
+  .dish {
+    gap: 10px;
+  }
 
-    .dish_wrapper {
-        gap: 10px;
-    }
+  .dish_wrapper {
+    gap: 10px;
+  }
 
-    .title,
-    .dish_count {
-        font-size: 18px;
-    }
+  .title,
+  .dish_count {
+    font-size: 18px;
+  }
 
-    .dish_ingredients {
-        font-size: 16px;
-    }
+  .dish_ingredients {
+    font-size: 16px;
+  }
 
-    .dish_price {
-        font-size: 18px;
-    }
+  .dish_price {
+    font-size: 18px;
+  }
 
-    .dish_info_container {
-        width: 40%;
-    }
-
+  .dish_info_container {
+    width: 40%;
+  }
 }
 
 @media only all and (max-width: 1024px) {
-    
 }
 
 @media only all and (max-width: 640px) {
-
 }
 
 @media only all and (max-width: 425px) {
-    .dish {
-        gap: 5px;
-    }
+  .dish {
+    gap: 5px;
+  }
 
-    .dish_wrapper {
-        gap: 5px;
-    }
+  .dish_wrapper {
+    gap: 5px;
+  }
 
-    .dish_count_container {
-        width: 30%;
-    }
+  .dish_count_container {
+    width: 30%;
+  }
 
-    .title,
-    .dish_count {
-        font-size: 16px;
-    }
+  .title,
+  .dish_count {
+    font-size: 16px;
+  }
 
-    .dish_ingredients {
-        font-size: 14px;
-    }
+  .dish_ingredients {
+    font-size: 14px;
+  }
 
-    .dish_price {
-        font-size: 16px;
-    }
+  .dish_price {
+    font-size: 16px;
+  }
 
-    .image_link {
-        width: 40%;
-    }
+  .image_link {
+    width: 40%;
+  }
 }

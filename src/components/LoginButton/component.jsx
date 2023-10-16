@@ -12,7 +12,7 @@ import { LoginForm } from "../LoginForm/component.jsx";
 import { selectCurrentUser } from "@/store/features/authorization/selectors.js";
 import { authorizationSlice } from "@/store/features/authorization/index.js";
 
-export const LoginButton = ({className}) => {
+export const LoginButton = ({ className }) => {
   const [isModalOpened, setIsModalOpened] = useState();
   const dispatch = useDispatch();
 

@@ -6,7 +6,7 @@ export const NewReviewFormContainer = ({ restaurantId }) => {
   const [createReview, { isLoading }] = useCreateReviewMutation();
 
   if (isLoading) {
-    return <Spinner/>;
+    return <Spinner />;
   }
 
   return (
@@ -14,4 +14,4 @@ export const NewReviewFormContainer = ({ restaurantId }) => {
       onSaveForm={(newReview) => createReview({ newReview, restaurantId })}
     />
   );
-}; 
+};

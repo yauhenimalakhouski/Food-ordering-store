@@ -6,30 +6,29 @@
   --page-background: #363636;
 }
 
-:root[theme='light'] {
-
+:root[theme="light"] {
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   font-size: 16px;
   height: 100vh;
-  background: #F2F5FC;
+  background: #f2f5fc;
   z-index: 10;
 }
 
 .main {
-	background: #bcc8e2;
-	min-height: calc(100vh - 150px);
+  background: #bcc8e2;
+  min-height: calc(100vh - 150px);
 }
 
 @media only all and (max-width: 1440px) {
-
   .main {
-      background: #363636;
+    background: #363636;
   }
 }

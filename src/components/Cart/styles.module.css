@@ -1,74 +1,73 @@
 .root {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 12.5%;
-    background-color: var(--page-background);
-    min-height: calc(100vh - 150px);
-    padding-bottom: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 12.5%;
+  background-color: var(--page-background);
+  min-height: calc(100vh - 150px);
+  padding-bottom: 50px;
 }
 
 .title {
-    text-align: center;
-    width: 100%;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px 0;
-    text-transform: uppercase;
-    color: var(--title-text-color);
-    padding-bottom: 20px;
-    border-bottom: solid 1px rgb(77, 13, 13);
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgb(77, 13, 13);
 }
 
 .secondary_title {
-    text-align: center;
-    width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: var(--secondary-title-text-color);
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--secondary-title-text-color);
 }
 
 .order_list {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px 20px;
-    gap: 20px;
-    border-bottom: solid 1px rgb(77, 13, 13);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 20px;
+  gap: 20px;
+  border-bottom: solid 1px rgb(77, 13, 13);
 }
 
 .total_amount {
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(212, 235, 11);
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(212, 235, 11);
 }
 
 @media only all and (max-width: 1440px) {
-    .root{
-        margin: 0;
-        width: 100%;
-    }
+  .root {
+    margin: 0;
+    width: 100%;
   }
-  
-  @media only all and (max-width: 1024px) {
-    .order_list {
-        width: 80%;
-        grid-template-columns: 1fr;
-    }
-  }
-  
-  @media only all and (max-width: 640px) {
-    .order_list {
-        width: 100%;
-        gap: 10px;
-    }
-  }
-  
-  @media only all and (max-width: 425px) {
+}
 
+@media only all and (max-width: 1024px) {
+  .order_list {
+    width: 80%;
+    grid-template-columns: 1fr;
   }
+}
+
+@media only all and (max-width: 640px) {
+  .order_list {
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+@media only all and (max-width: 425px) {
+}

@@ -1,66 +1,59 @@
 .root {
-    width: 80%;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 12.5%;
-    background: var(--page-background);
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 12.5%;
+  background: var(--page-background);
 }
 
-
 .title {
-    font-size: 36px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #008B8B;
-    margin: 20px;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #008b8b;
+  margin: 20px;
 }
 
 .navigation {
-    width: 100%;
-    display: flex;
-    background: rgb(20, 18, 18);
+  width: 100%;
+  display: flex;
+  background: rgb(20, 18, 18);
 }
 
 .banner_container {
-    width: 100%;
-    position: relative;
-    aspect-ratio: 16/7;
-    
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16/7;
 }
 
 .banner {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 @media only all and (max-width: 1440px) {
-
-    .root {
-        width: 100%;
-        margin: 0;
-    }
+  .root {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 @media only all and (max-width: 1024px) {
-
-    .root {
-        margin: 0;
-    }
+  .root {
+    margin: 0;
+  }
 }
 
 @media only all and (max-width: 640px) {
-
-    .title {
-        font-size: 30px;
-    }
+  .title {
+    font-size: 30px;
+  }
 }
 
 @media only all and (max-width: 425px) {
-
-    .title {
-        font-size: 24px;
-    }
+  .title {
+    font-size: 24px;
+  }
 }
-

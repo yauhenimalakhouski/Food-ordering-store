@@ -2,8 +2,6 @@ import { useGetUsersQuery } from "@/store/services/api";
 import { User } from "./component";
 import { restoreItems } from "@/utils/local-storage";
 
-
-
 export const UserContainer = ({ userId }) => {
   const localData = restoreItems();
   const { data: user, isFetching } = useGetUsersQuery(undefined, {

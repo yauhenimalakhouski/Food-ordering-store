@@ -1,9 +1,7 @@
 import classNames from "classnames";
 
-
 import styles from "./styles.module.css";
 import { UserContainer } from "../User/container";
-
 
 export const Review = ({ review, className }) => {
   if (!review) {

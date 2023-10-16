@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useDispatch, useSelector } from "react-redux";
 import { Dish } from "./component";
@@ -9,23 +9,21 @@ export const DishContainer = ({ dish, ...props }) => {
   const amount = useSelector((state) => selectDishAmountById(state, dish?.id));
   const dispatch = useDispatch();
 
-
-
   if (!dish) {
     return null;
   }
 
   return (
-      <Dish
-        dish={dish}
-        amount={amount}
-        increment={() => {
-          dispatch(cartSlice.actions.incrementDish(dish.id));
-        }}
-        decrement={() => {
-          dispatch(cartSlice.actions.decrementDish(dish.id));
-        }}
-        {...props}
-      />
+    <Dish
+      dish={dish}
+      amount={amount}
+      increment={() => {
+        dispatch(cartSlice.actions.incrementDish(dish.id));
+      }}
+      decrement={() => {
+        dispatch(cartSlice.actions.decrementDish(dish.id));
+      }}
+      {...props}
+    />
   );
-}; 
+};

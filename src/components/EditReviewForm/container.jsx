@@ -17,7 +17,7 @@ export const EditReviewFormContainer = ({
   }, [isSuccess, onSaveForm]);
 
   if (isLoading) {
-    return <Spinner/>;
+    return <Spinner />;
   }
 
   return (

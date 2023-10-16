@@ -1,13 +1,16 @@
-import styles from './styles.module.css';
-import classNames from 'classnames';
+import styles from "./styles.module.css";
+import classNames from "classnames";
 
 import { useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "../Button/component";
 import { authorizationSlice } from "@/store/features/authorization";
-import { selectCurrentUser, selectCurrentUserPassword } from '@/store/features/authorization/selectors';
-import { restoreItems } from '@/utils/local-storage';
+import {
+  selectCurrentUser,
+  selectCurrentUserPassword,
+} from "@/store/features/authorization/selectors";
+import { restoreItems } from "@/utils/local-storage";
 
 const DEFAULT_FORM_VALUE = {
   login: "",
@@ -33,11 +36,6 @@ export const LoginForm = ({ onLogin }) => {
   DEFAULT_FORM_VALUE.password = useSelector(selectCurrentUserPassword);
 
   const [form, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUE);
-  
-  
-  
-  
-  
 
   return (
     <div className={classNames(styles.root)}>
@@ -63,16 +61,19 @@ export const LoginForm = ({ onLogin }) => {
       </div>
 
       <Button
-        disabled={
-          (!form.login || !form.password)
-        }
+        disabled={!form.login || !form.password}
         onClick={() => {
-          dispatchUser(authorizationSlice.actions.login({login:form.login, password:form.password}));
+          dispatchUser(
+            authorizationSlice.actions.login({
+              login: form.login,
+              password: form.password,
+            })
+          );
           onLogin();
           document.body.style.overflow = "auto";
-          document.querySelector('.main').style.opacity = "1";
+          document.querySelector(".main").style.opacity = "1";
         }}
-        type = "auth_submit"
+        type="auth_submit"
       >
         Log In
       </Button>
