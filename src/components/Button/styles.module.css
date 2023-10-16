@@ -123,9 +123,6 @@
   border-radius: 5px;
   background-size: 75%;
   padding: 5px;
-  /* position: absolute;
-  top: 35px;
-  right: 230px; */
   -webkit-box-shadow: 2px 2px 2px 1px rgba(245, 245, 245, 0.5);
   box-shadow: 2px 2px 2px 1px rgba(245, 245, 245, 0.5);
   cursor: pointer;
@@ -202,4 +199,17 @@
   .authoriazation {
     width: 100px;
   }
+}
+
+@media only all and (max-width: 425px) {
+  .btn_minus {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .btn_plus {
+    width: 15px;
+    height: 15px;
+  }
+
 }

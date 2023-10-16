@@ -11,7 +11,7 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
 
   return (
     <div className={classNames(styles.root, className)}>
-      <div className={styles.dish}>
+      <div className={styles.dish_wrapper}>
         <div className={styles.dish}>
           <Link 
             href={`/dishes/${dish.id}`}
@@ -20,6 +20,8 @@ export const Dish = ({ dish, amount, increment, decrement, className }) => {
             <Image
               src={dishImageUrl.url}
               priority
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0M/P/DwADIQG8SWu0YQAAAABJRU5ErkJggg=="
+              placeholder = 'blur'
               fill= {true}
               alt="Dish"
               className={styles.image}

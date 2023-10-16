@@ -20,7 +20,7 @@
 .title {
   font-size: 30px;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 10px 0 0 -50px;
   text-transform: uppercase;
   color: var(--title-text-color);
   align-self: center;
@@ -37,5 +37,33 @@
   .root {
     margin-left: 0;
     align-items: center;
+  }
+
+  .title {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media only all and (max-width: 1024px) {
+  .reviews_container {
+    width: 70%;
+  }
+}
+
+@media only all and (max-width: 640px) {
+  .reviews_container {
+    width: 80%;
+  }
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media only all and (max-width: 425px) {
+  .reviews_container {
+    width: 90%;
+  }
+  .title {
+    font-size: 22px;
   }
 }

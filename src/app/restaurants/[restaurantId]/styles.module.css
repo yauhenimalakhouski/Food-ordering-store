@@ -50,3 +50,17 @@
     }
 }
 
+@media only all and (max-width: 640px) {
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media only all and (max-width: 425px) {
+
+    .title {
+        font-size: 24px;
+    }
+}
+
